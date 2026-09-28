@@ -390,6 +390,9 @@ doesn't state per-project.
   unverified: check it first.
 - **[lesson]** Check a library's semantics (time zones and DST, connection
   pools, transactions) before proposing a design on it.
+- **[lesson]** When code stops a repeating async task (polling, a debounced
+  search, a cancelled fetch), drop the results of calls still in flight,
+  and test that by resolving one after the stop.
 
 ### Writing commits
 
@@ -428,6 +431,9 @@ doesn't state per-project.
 - **[lesson]** Before recording a tool's findings or counts, take them from
   its output itself, not from a skim or memory, and check the record's list
   and count against that output.
+- **[lesson]** Take an endpoint's path from the code's route table before
+  reading its status code as evidence; a 404 from a misremembered path
+  looks like a missing deployment.
 
 ### Environment
 
