@@ -78,8 +78,11 @@ doesn't state per-project.
   throwaway scripts. Never list something as "not verified" that you could have checked.
   Don't call a task done while an external integration or a deployment path
   has only run against mocks: run it live, or list it as unverified.
-- **[rule]** After any push/force-push, proactively check live state rather
-  than assuming it landed and had the intended effect.
+- **[rule]** After a push that deploys or changes a running system (such
+  as a GitOps sync), check the running system rather than assuming the push
+  landed and had the intended effect. After a plain branch push, confirming
+  the remote branch is enough; don't wait on CI whose failures already reach
+  the user.
 - **[rule]** Before concluding that anything is absent, unavailable or
   impossible (a capability, a tool, a persisted grant, access to a page),
   check the source that settles it: docs, the web, the transcript, the
