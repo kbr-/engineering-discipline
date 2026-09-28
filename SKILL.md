@@ -425,6 +425,9 @@ doesn't state per-project.
   before asserting them in a test.
 - **[lesson]** Measure before blaming slowness on a mode or environment.
 - **[lesson]** Before stating a global value from a search, read every hit.
+- **[lesson]** Before recording a tool's findings or counts, take them from
+  its output itself, not from a skim or memory, and check the record's list
+  and count against that output.
 
 ### Environment
 
