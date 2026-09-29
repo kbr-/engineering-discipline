@@ -419,6 +419,10 @@ doesn't state per-project.
 
 ### Checking
 
+- **[lesson]** In a theory reread, also read together every entry that
+  touches one object (a lock, a table, a contract surface), and put your
+  own new proposals through the same checklist before bringing them;
+  most missed gaps sit between entries, or in the pass's own output.
 - **[lesson]** An independent check differs from the code in exactly the
   assumption under test; a reproduction that reuses the code's own URL or
   inputs can't tell the causes apart. Compare against a known-good earlier
