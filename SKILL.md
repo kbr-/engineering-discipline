@@ -429,11 +429,17 @@ doesn't state per-project.
   a separate worktree, not by stashing in a shared checkout.
 - **[lesson]** Work time, weekday and cursor expectations out by hand
   before asserting them in a test.
+- **[lesson]** Test scheduled or framework-invoked code through the real
+  scheduler or framework entry point, not by calling the function it would
+  invoke.
 - **[lesson]** Measure before blaming slowness on a mode or environment.
 - **[lesson]** Before stating a global value from a search, read every hit.
-- **[lesson]** Before recording a tool's findings or counts, take them from
-  its output itself, not from a skim or memory, and check the record's list
-  and count against that output.
+- **[lesson]** A fact you state (in a reply, a comment, a document, a
+  commit message or code) rests on earlier output only while nothing since
+  could have changed it, the same test as for skipping a rerun. State that
+  someone else can change (a remote, a deployment, a colleague's system,
+  the user's own terminal) is checked again for the statement, and a number
+  is copied from output, never estimated.
 - **[lesson]** Take an endpoint's path from the code's route table before
   reading its status code as evidence; a 404 from a misremembered path
   looks like a missing deployment.
