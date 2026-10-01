@@ -141,6 +141,11 @@ doesn't state per-project.
   before moving on confirm everything outstanding is resolved and recorded.
   An approved plan is the exception: execute it autonomously, without
   asking per step.
+- **[lesson]** Approval to run a plan doesn't survive a redirection. Once
+  the user takes the conversation to something else, finish what they
+  asked, report, and wait; resume the earlier plan only when told to, even
+  when its next step looks obviously unblocked. Background work you
+  started (a push, a test run) is not idle time to fill with the next task.
 - **[rule]** Explain your own jargon without being asked, and for every
   design choice you make, be ready to say what it gains.
 - **[rule]** Write product copy, errors and warnings for the end user: say
