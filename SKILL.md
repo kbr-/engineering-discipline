@@ -443,7 +443,10 @@ doesn't state per-project.
   could have changed it, the same test as for skipping a rerun. State that
   someone else can change (a remote, a deployment, a colleague's system,
   the user's own terminal) is checked again for the statement, and a number
-  is copied from output, never estimated.
+  is copied from output, never estimated. The exception is an action the
+  user reports having done themselves (a branch deleted, a ticket moved, a
+  request fulfilled): their word is the record, so take it without a
+  check.
 - **[lesson]** Take an endpoint's path from the code's route table before
   reading its status code as evidence; a 404 from a misremembered path
   looks like a missing deployment.
