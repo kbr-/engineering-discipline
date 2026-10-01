@@ -393,6 +393,13 @@ doesn't state per-project.
   unverified: check it first.
 - **[lesson]** Check a library's semantics (time zones and DST, connection
   pools, transactions) before proposing a design on it.
+- **[lesson]** Before designing around a tool's limit, check whether the
+  tool already does the job: the primitives of what is already in use are
+  mechanisms to reuse too (git reads its index with `ls-files`, `cat-file`
+  and `show :path`, so a check of the staged state needs no copy of it).
+- **[lesson]** Before adding an option, ask whether every caller wants the
+  new behaviour. If they all do, change the behaviour; a flag no caller
+  would leave unset is a second mode to keep working for nothing.
 - **[lesson]** When code stops a repeating async task (polling, a debounced
   search, a cancelled fetch), drop the results of calls still in flight,
   and test that by resolving one after the stop.
@@ -410,7 +417,12 @@ doesn't state per-project.
   container getter) has a user in the same commit; drop what nothing calls.
 - **[lesson]** Aim a fixup at the commit whose change it belongs to, not
   at the commit where the file's other code sits. Check
-  `git diff --cached --stat` before each fixup.
+  `git diff --cached --stat` before each fixup. When a later step changes
+  code an earlier commit added, commit that change as a `--fixup` of the
+  earlier commit right away, apart from the step's own files. To realign
+  changes already committed in the wrong place, split each overfull commit
+  where it stands and fold the pieces into their targets with fixups,
+  rather than resetting the branch.
 - **[lesson]** A rebase todo script must fail when it matches nothing; the
   todo is written `pick <hash> # <subject>`.
 - **[lesson]** When a decision changes, grep the branch's docs, runbooks,
