@@ -406,6 +406,10 @@ doesn't state per-project.
   state it changed, read back from where that state lives (the remote's
   ref after a push, the stored row after a write). When the same
   confirmation keeps following a tool by hand, move it into the tool.
+- **[lesson]** Before proposing anything that runs on every turn or request
+  (a hook, a per-commit check, a call in a loop), time it on a real input
+  and state the latency with the proposal: it is paid in the user's
+  wall-clock time each time it runs.
 - **[lesson]** Before adding an option, ask whether every caller wants the
   new behaviour. If they all do, change the behaviour; a flag no caller
   would leave unset is a second mode to keep working for nothing.
