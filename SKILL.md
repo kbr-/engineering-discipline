@@ -441,6 +441,9 @@ doesn't state per-project.
 - **[lesson]** When a decision changes, grep the branch's docs, runbooks,
   comments, commit messages and plan for text that depends on it, in the
   same edit.
+- **[lesson]** Rewrap prose with a tool (Vim's `gq`, `fmt`, Python's
+  `textwrap`) over the whole paragraph, never by hand-placed line breaks,
+  which leave ragged or overlong lines behind.
 
 ### Checking
 
