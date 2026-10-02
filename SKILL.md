@@ -504,6 +504,9 @@ doesn't state per-project.
   the name the code reads, and render the chart; local runs bypass it.
 - **[lesson]** Trigger a scheduled job directly rather than waiting for its
   tick.
+- **[lesson]** Delete an input only after the output made from it is
+  written and verified, even to save space: a step that fails after the
+  deletion has to redo every step before it.
 - **[lesson]** Record a working external-API recipe (URL, identity,
   parameters) in the plan the moment it first succeeds, and record every
   part of a multi-part request, an authorization above all, before acting
