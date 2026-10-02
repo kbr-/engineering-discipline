@@ -64,20 +64,24 @@ doesn't state per-project.
   safety margin, a retry, pagination that hides the bug) in place of the root cause.
 - **[rule]** Don't let an overclaim or misattribution stand — including
   about your own earlier work. If you're not sure something is settled fact
-  or history, say so rather than stating it as fact. Don't inflate a result, and in a message
-  drafted in the user's name state only what is true of the user.
+  or history, say so rather than stating it as fact. Don't inflate a result,
+  and in a message drafted in the user's name state only what is true of the
+  user. A fact someone else established is stated as theirs, with the scope
+  they checked, never as a bare fact you appear to have checked.
 - **[rule]** Track technical state precisely (what's been tried, prior root
   causes, current resource limits) and flag it yourself if a new proposal
   contradicts something already established this session — don't wait for
   the user to catch the drift.
 - **[rule]** Prefer an actual empirical test over a plausible-sounding
   claim. If something hasn't been tested, say that plainly instead of
-  presenting it as done. The test must be able to fail: exercise the real
-  production path, not a manual stand-in; mocks built on your own assumptions prove
-  nothing about an external contract; put verification into committed tests, not
-  throwaway scripts. Never list something as "not verified" that you could have checked.
-  Don't call a task done while an external integration or a deployment path
-  has only run against mocks: run it live, or list it as unverified.
+  presenting it as done: before writing that a check passes, find its run.
+  The test must be able to fail: exercise the real production path, not a
+  manual stand-in; mocks built on your own assumptions prove nothing about
+  an external contract; put verification into committed tests, not throwaway
+  scripts. Never list something as "not verified" that you could have
+  checked. Don't call a task done while an external integration or a
+  deployment path has only run against mocks: run it live, or list it as
+  unverified.
 - **[rule]** After a push that deploys or changes a running system (such
   as a GitOps sync), check the running system rather than assuming the push
   landed and had the intended effect. After a plain branch push, confirming
@@ -169,13 +173,14 @@ doesn't state per-project.
 - **[rule]** Never reference a private/uncommitted doc, an internal
   task-tracking artifact or its own shorthand labels ("Step N", an item
   number), or an environment-specific literal (a throwaway cluster/instance
-  id, a personal path), where the specific reader can't resolve it —
-  committed content, but also any other artifact addressed to a reader
-  outside your own working context (an email, a meeting agenda, a status
-  update). Being committed to git isn't the trigger; the reader's own
-  access is. Generalize or drop the reference. Conversely, make any reference the reader can open
-  (a ticket, a schema, a page) a hyperlink to it, and never record a commit
-  hash in a record meant to stay accurate.
+  id, a personal path), or something that doesn't exist yet (a future merge
+  request), where the specific reader can't resolve it — committed content,
+  but also any other artifact addressed to a reader outside your own working
+  context (an email, a meeting agenda, a status update). Being committed to
+  git isn't the trigger; the reader's own access is. Generalize or drop the
+  reference. Conversely, make any reference the reader can open (a ticket, a
+  schema, a page) a hyperlink to it, and never record a commit hash in a
+  record meant to stay accurate.
 - **[rule]** Generalize a one-off correction or preference into a standing
   rule in the relevant `CLAUDE.md` (project or global, whichever actually
   fits) rather than leaving it as a one-time fix or project-scoped memory. Put
@@ -465,7 +470,9 @@ doesn't state per-project.
   scheduler or framework entry point, not by calling the function it would
   invoke.
 - **[lesson]** Measure before blaming slowness on a mode or environment.
-- **[lesson]** Before stating a global value from a search, read every hit.
+- **[lesson]** A statement about several things (a global value from a
+  search, "the list routes", "every space") holds only once checked for each
+  one: read every hit, or name only the ones that hold.
 - **[lesson]** A fact you state (in a reply, a comment, a document, a
   commit message or code) rests on earlier output only while nothing since
   could have changed it, the same test as for skipping a rerun. State that
@@ -500,8 +507,10 @@ doesn't state per-project.
 
 - **[lesson]** Before declaring done, list every integration and
   deployment path never exercised live.
-- **[lesson]** Generate test counts from the branch diff, or leave them
-  out.
+- **[lesson]** Once everything is ready, the cover letter included, run
+  every check once at the branch tip (one already run on that exact tip
+  counts), and state check results from that run only. Generate test counts
+  from the branch diff, or leave them out.
 - **[lesson]** List leftover branches and worktrees for deletion.
 - **[lesson]** Check the plan's and records' counts and status against the
   final state.
