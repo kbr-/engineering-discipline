@@ -242,6 +242,8 @@ doesn't state per-project.
 - **[rule]** Zero tolerance for a hardcoded per-deployment/per-instance
   literal anywhere in a proposed solution, including in config — insist on
   a deployment-agnostic design instead, even if that's more work.
+- **[rule]** Name Python files with underscores, never hyphens: a hyphenated
+  file can't be imported, so its tests and tools need workarounds to load it.
 - **[rule]** Prefer the smallest surgical diff against the existing
   artifact over a new directory/file/duplicated block, unless there's a
   real reason not to reuse what's there. Prefer the simplest mechanism too.
