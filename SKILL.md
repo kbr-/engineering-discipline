@@ -382,7 +382,11 @@ doesn't state per-project.
 - **[lesson]** Settle the source of truth and ownership with the
   stakeholders before implementing.
 - **[lesson]** List test and tooling dependencies up front and ask for
-  every install approval at once.
+  every install approval at once. Before installing any of them, resolve
+  the whole set together without installing (`pip install --dry-run
+  --report`, or the package manager's equivalent), base packages such as
+  torch included, and install only once that resolution has the versions
+  wanted: a pin found after the base is installed means a rebuild.
 - **[lesson]** Before choosing a tool, read how CI and the Makefile install
   and test, the lockfile and `packageManager`. Before naming an environment
   variable, read the settings loader.
