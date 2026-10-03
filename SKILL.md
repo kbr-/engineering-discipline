@@ -332,6 +332,11 @@ doesn't state per-project.
   independent judgment, not just agreement, and expect them to argue back.
 - **[rule]** Before and after a destructive or cleanup action, check that
   no orphaned state remains rather than trusting it completed cleanly.
+- **[rule]** When delegating work to another agent or session, send the
+  design, not just the goal: the spec, the decisions already made, and the
+  checks the result must pass. Before relying on what comes back, read its
+  diff and rerun its key checks yourself; a delegate's report that tests
+  pass is its word, not a check.
 
 ## Research / self-management discipline (applies to autonomous work too)
 
