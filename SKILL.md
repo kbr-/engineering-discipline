@@ -499,6 +499,11 @@ doesn't state per-project.
   reader could take: "the first producer" reads as the first in the
   company. Where it's false at that reading, narrow the text to what was
   checked.
+- **[lesson]** Facts checked one by one can still contradict each other.
+  Before offering a document, read it whole by object and term: every
+  sentence about one system or concept side by side, each term meaning one
+  thing throughout and defined where it first appears, and no sentence
+  implying what another denies.
 - **[lesson]** A fact you state (in a reply, a comment, a document, a
   commit message or code) rests on earlier output only while nothing since
   could have changed it, the same test as for skipping a rerun. State that
