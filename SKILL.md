@@ -486,7 +486,11 @@ doesn't state per-project.
 - **[lesson]** Measure before blaming slowness on a mode or environment.
 - **[lesson]** A statement about several things (a global value from a
   search, "the list routes", "every space") holds only once checked for each
-  one: read every hit, or name only the ones that hold.
+  one: read every hit, or name only the ones that hold. Name its domain in
+  the text (which system, set and date) and check it at the widest reading a
+  reader could take: "the first producer" reads as the first in the
+  company. Where it's false at that reading, narrow the text to what was
+  checked.
 - **[lesson]** A fact you state (in a reply, a comment, a document, a
   commit message or code) rests on earlier output only while nothing since
   could have changed it, the same test as for skipping a rerun. State that
