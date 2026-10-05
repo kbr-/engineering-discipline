@@ -184,6 +184,14 @@ doesn't state per-project.
   reference. Conversely, make any reference the reader can open (a ticket, a
   schema, a page) a hyperlink to it, and never record a commit hash in a
   record meant to stay accurate.
+- **[rule]** In a document colleagues read over time (a design, a page, a
+  runbook), name no people: name the role, team or ticket, and state what a
+  person said as the decision it produced; keep who said it in your private
+  evidence. Give every reference a referent the reader can look up or act
+  on ("another proof of concept", "some services" give neither): name it,
+  link it, or cut it. Expand each abbreviation at its first mention, internal
+  names above all; only the standard ones every developer knows (API, REST,
+  JSON, URL, UUID, ID, IP, SQL, CI, UI, HTTP, TLS, UTC) go unexpanded.
 - **[rule]** Generalize a one-off correction or preference into a standing
   rule in the relevant `CLAUDE.md` (project or global, whichever actually
   fits) rather than leaving it as a one-time fix or project-scoped memory. Put
