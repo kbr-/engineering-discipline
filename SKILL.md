@@ -77,8 +77,9 @@ doesn't state per-project.
   presenting it as done: before writing that a check passes, find its run.
   The test must be able to fail, and be seen to: break the code each new
   test guards (mutants, with an unmutated control run first) and watch that
-  test fail; a surviving mutant is a missing test or an explained
-  equivalent. Exercise the real production path, not a manual stand-in;
+  test fail; a surviving mutant is a weak assertion to strengthen, a
+  distinct case to test, or an explained equivalent; a test where every
+  mutant it kills is also killed by another test is redundant, so delete it. Exercise the real production path, not a manual stand-in;
   mocks built on your own assumptions prove nothing about an external
   contract; put verification into committed tests, not throwaway scripts.
   Never list something as "not verified" that you could have checked. Don't
