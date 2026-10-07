@@ -519,21 +519,28 @@ doesn't state per-project.
 
 ### Environment
 
-- **[lesson]** Before changing dependencies or starting a server, check
-  for running processes and listeners in the worktree.
+- **[lesson]** Before changing dependencies or starting a server, check for
+  running processes and listeners in the worktree.
 - **[lesson]** When a branch reset removes migrations, reset the local
   database too; when adding a migration, grep for tests that pin the head.
-- **[lesson]** Trace each deployment-chart value to its template and to
-  the name the code reads, and render the chart; local runs bypass it.
+- **[lesson]** Trace each deployment-chart value to its template and to the
+  name the code reads, and render the chart; local runs bypass it.
+- **[lesson]** Before a plan that deploys manifests into a cluster counts as
+  settled, render them for that cluster, another team's as well as your own,
+  and check the result against the cluster: its admission policy (Pod
+  Security), the secrets and their stores, ingress classes, storage classes
+  and capacity. Reading the code answers the questions you thought of; the
+  render shows what will land. When a render needs an install or downloads,
+  propose it with the plan, not once a question demands it.
 - **[lesson]** Trigger a scheduled job directly rather than waiting for its
   tick.
-- **[lesson]** Delete an input only after the output made from it is
-  written and verified, even to save space: a step that fails after the
-  deletion has to redo every step before it.
+- **[lesson]** Delete an input only after the output made from it is written
+  and verified, even to save space: a step that fails after the deletion has
+  to redo every step before it.
 - **[lesson]** Record a working external-API recipe (URL, identity,
   parameters) in the plan the moment it first succeeds, and record every
-  part of a multi-part request, an authorization above all, before acting
-  on any part.
+  part of a multi-part request, an authorization above all, before acting on
+  any part.
 - **[lesson]** Put reusable dev tooling (environment overrides, end-to-end
   tests) in the target repository from the start.
 
