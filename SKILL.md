@@ -516,6 +516,13 @@ doesn't state per-project.
 - **[lesson]** Take an endpoint's path from the code's route table before
   reading its status code as evidence; a 404 from a misremembered path
   looks like a missing deployment.
+- **[lesson]** A search that finds a name only where it is used is no
+  evidence that nothing defines it: read that place before saying so. The
+  use is often the definition.
+- **[lesson]** Before asking another team for a step, check who holds the
+  access it needs, not only that you lack it, and address the holder
+  closest to the work; look for a route around the step, and merge steps
+  that need the same access to the same resource.
 
 ### Environment
 
