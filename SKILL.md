@@ -474,6 +474,12 @@ doesn't state per-project.
 
 ### Checking
 
+- **[lesson]** A failure test raises the error the real library raises, by driving a real client
+  into that state against a real service; an error you construct yourself tests your belief about
+  the library, and mutation testing can't see past it, since the code and its tests share the
+  belief. Where the state can't be produced, build the error as the library's source builds it, and
+  read every path it reaches the code by (the failing call, a later poll or flush, a callback).
+  Check a reviewer's proposed fix like any other claim before building it.
 - **[lesson]** In a theory reread, also read together every entry that
   touches one object (a lock, a table, a contract surface), and put your
   own new proposals through the same checklist before bringing them;
