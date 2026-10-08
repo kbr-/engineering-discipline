@@ -404,6 +404,10 @@ doesn't state per-project.
 - **[lesson]** Before choosing a tool, read how CI and the Makefile install
   and test, the lockfile and `packageManager`. Before naming an environment
   variable, read the settings loader.
+- **[lesson]** Whether a tool for a job exists is a question about the ecosystem, not the
+  environment: search the package index, the tools' documentation and the web, and weigh what you
+  find whether or not it is installed. Propose an install with what it gains; the user approves it.
+  "Nothing installed does it" is no reason to build your own.
 - **[lesson]** Before adding a field, search the existing ones, JSON
   metadata included. Before citing a file as the convention, confirm a live
   route reaches it.
