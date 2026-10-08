@@ -475,6 +475,9 @@ doesn't state per-project.
 - **[lesson]** Rewrap prose with a tool (Vim's `gq`, `fmt`, Python's
   `textwrap`) over the whole paragraph, never by hand-placed line breaks,
   which leave ragged or overlong lines behind.
+- **[lesson]** Name a script that serves one library, tool or service
+  after it (`<library>_<purpose>.py`): a generic name tells the reader the
+  code is generic, and keeps that name free for code that is.
 
 ### Checking
 
