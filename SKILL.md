@@ -536,6 +536,12 @@ doesn't state per-project.
   access it needs, not only that you lack it, and address the holder
   closest to the work; look for a route around the step, and merge steps
   that need the same access to the same resource.
+- **[lesson]** Ask another person as few times as possible: for each answer
+  a step could get, fold the follow-up you would then ask into the same
+  request. Run a command you hand over on the nearest stand-in you can reach
+  first, and predict its output for each possible answer; a command whose
+  output two answers share, or that reports a match without naming what
+  matched, will cost them a second run.
 
 ### Environment
 
