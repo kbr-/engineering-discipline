@@ -487,6 +487,10 @@ doesn't state per-project.
   belief. Where the state can't be produced, build the error as the library's source builds it, and
   read every path it reaches the code by (the failing call, a later poll or flush, a callback).
   Check a reviewer's proposed fix like any other claim before building it.
+- **[lesson]** Design tests from what the checking rules require, not from the tests the repository
+  already has. No existing test of the code, or no CI service for the system it talks to, is a gap
+  the task closes (add the service beside the ones CI already runs), never a reason to test around
+  that system with fakes and built-in errors standing in for its own.
 - **[lesson]** In a theory reread, also read together every entry that
   touches one object (a lock, a table, a contract surface), and put your
   own new proposals through the same checklist before bringing them;
