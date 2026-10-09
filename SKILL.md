@@ -99,8 +99,11 @@ doesn't state per-project.
 - **[rule]** Investigate every unexplained anomaly in output, even one
   mentioned in passing (a count of zero, a changed port, a slow run);
   don't pass over it.
-- **[rule]** When you find a defect, sweep for the whole class of it
-  everywhere else it could be, and fix all of them.
+- **[rule]** When you find a defect, sweep for the whole class of it everywhere else it could be,
+  and fix all of them. A check built to catch it targets the class too: name the class by its
+  mechanism, not by the instance you hit, run the candidate check over a real corpus (the
+  repository's merged history) and read its hits and misses before settling its scope. A claim about
+  what a check can or can't do is measured the same way before you state it.
 - **[rule]** Before building something new, check whether an artifact or
   mechanism for it already exists (a skill, a script, a config, an
   official image) and reuse it.
