@@ -524,8 +524,10 @@ doesn't state per-project.
 - **[lesson]** A prevention you add for your own mistake (a rule, a check, a hook, a tool) is held
   to the same standard as a fix: it finds or forces the cause of the class it prevents. A check that
   catches the class by chance (repeating a run, a wider margin, a retry) is a workaround written
-  into the rules, and it passes the cases it misses for as long as it stands. Before committing one,
-  say how it finds or forces the cause.
+  into the rules, and it passes the cases it misses for as long as it stands. Only where no
+  prevention can find or force the cause may one catch the class by chance, and then the chance it
+  catches it is measured, stated plainly with the prevention, and high: above 80%. Before committing
+  one, say how it finds or forces the cause, or why nothing can and what its measured chance is.
 - **[lesson]** A statement about several things (a global value from a
   search, "the list routes", "every space") holds only once checked for each
   one: read every hit, or name only the ones that hold. Name its domain in
