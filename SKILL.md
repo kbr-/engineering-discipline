@@ -512,6 +512,15 @@ doesn't state per-project.
   scheduler or framework entry point, not by calling the function it would
   invoke.
 - **[lesson]** Measure before blaming slowness on a mode or environment.
+- **[lesson]** Reproduce a failure that comes and goes by forcing what it depends on, never by
+  repeating the run under load or widening a budget until it passes. Where the suspect is one
+  measured value (a timing the code estimates from, a clock read), fix that value in the test and
+  show both sides: the value that fails every time and the one that passes. Where the suspect is an
+  order of events, add short random sleeps and a trace print at each place you suspect, run until it
+  fails, read the trace for the order that failed, and turn that order into forced ordering (a
+  barrier, an event, a condition variable) so it fails every time. Fix the cause the forced run
+  shows, and keep the forcing in the test that guards it. Before rerunning a run that hung, read
+  where it stands: its threads' stacks, its log.
 - **[lesson]** A statement about several things (a global value from a
   search, "the list routes", "every space") holds only once checked for each
   one: read every hit, or name only the ones that hold. Name its domain in
