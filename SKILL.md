@@ -521,6 +521,11 @@ doesn't state per-project.
   barrier, an event, a condition variable) so it fails every time. Fix the cause the forced run
   shows, and keep the forcing in the test that guards it. Before rerunning a run that hung, read
   where it stands: its threads' stacks, its log.
+- **[lesson]** A prevention you add for your own mistake (a rule, a check, a hook, a tool) is held
+  to the same standard as a fix: it finds or forces the cause of the class it prevents. A check that
+  catches the class by chance (repeating a run, a wider margin, a retry) is a workaround written
+  into the rules, and it passes the cases it misses for as long as it stands. Before committing one,
+  say how it finds or forces the cause.
 - **[lesson]** A statement about several things (a global value from a
   search, "the list routes", "every space") holds only once checked for each
   one: read every hit, or name only the ones that hold. Name its domain in
