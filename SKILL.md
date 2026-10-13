@@ -422,6 +422,9 @@ doesn't state per-project.
 - **[lesson]** Design against the deployment's replica counts and every
   concurrent writer.
 - **[lesson]** List each decision function's unknown or malformed inputs.
+- **[lesson]** Ask what an anonymous or hostile caller controls (a method, a path, a header, a
+  field), and bound every such value that becomes an identifier: a metric label, a key, a file or
+  table name. A label taking the HTTP method as sent let any client add metric series without limit.
 - **[lesson]** Settle who sees each UI element before placing it.
 - **[lesson]** Every mechanism a decision names maps to a step, or is
   marked out of scope.
@@ -601,6 +604,11 @@ doesn't state per-project.
   every check once at the branch tip (one already run on that exact tip
   counts), and state check results from that run only. Generate test counts
   from the branch diff, or leave them out.
+- **[lesson]** Before offering a branch, review its diff as you would a colleague's merge
+  request: the code and configuration, run where they can be, not only its description against
+  the evidence. A review of the descriptions alone passes what the code gets wrong.
+- **[lesson]** Fix a reviewer's finding about a claim everywhere the claim is stated: the other
+  documents, the commit messages and the code comments, found by searching for its words.
 - **[lesson]** List leftover branches and worktrees for deletion.
 - **[lesson]** Check the plan's and records' counts and status against the
   final state.
