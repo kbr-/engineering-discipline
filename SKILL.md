@@ -531,6 +531,10 @@ doesn't state per-project.
   prevention can find or force the cause may one catch the class by chance, and then the chance it
   catches it is measured, stated plainly with the prevention, and high: above 80%. Before committing
   one, say how it finds or forces the cause, or why nothing can and what its measured chance is.
+  Then attack it as a reviewer would: the cases it lets through, the new mistakes it invites, and
+  what it does to the agents that read it: whatever goes into a model's context pulls on everything
+  written after it, and an instruction placed beside it doesn't undo that pull. Change the design
+  where the attack lands, before anyone else has to find it.
 - **[lesson]** A statement about several things (a global value from a
   search, "the list routes", "every space") holds only once checked for each
   one: read every hit, or name only the ones that hold. Name its domain in
