@@ -106,7 +106,9 @@ doesn't state per-project.
   what a check can or can't do is measured the same way before you state it.
 - **[rule]** Before building something new, check whether an artifact or
   mechanism for it already exists (a skill, a script, a config, an
-  official image) and reuse it.
+  official image) and reuse it. The sentence that decides to build names
+  the search made and what it found; a decision written before the search
+  is the habit this rule exists against.
 - **[lean]** To localize a failure, compare against a known-good reference
   environment: why doesn't it happen there?
 
@@ -417,6 +419,15 @@ doesn't state per-project.
 
 ### Design
 
+- **[lesson]** A recommendation follows from its diagnosis: the option you
+  recommend removes the cause your own diagnosis named. Where that option
+  costs more (tokens, time, a larger build), state the cost and recommend
+  it anyway, unless the user set a budget; an option that leaves the named
+  cause standing is offered as that, never as the recommendation. A
+  cheaper option recommended against a stated cause, and a cheap fix queued
+  instead of made, come from one habit: weighing your own cost above the
+  priority the user stated. Before sending a recommendation, read it beside
+  the cause it answers.
 - **[lesson]** For a sync, design create, update and delete in each
   direction.
 - **[lesson]** Design against the deployment's replica counts and every
