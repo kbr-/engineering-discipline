@@ -363,6 +363,14 @@ doesn't state per-project.
   Cut cost that buys nothing; don't cut cost that buys rigor. For heavy computation, estimate
   the time first, use compiled code and parallelism, and answer a resource guard by making
   the job cheaper, never by slipping under it.
+- **[rule]** A new process (a check, a review step, a table to fill) has to
+  save time while keeping or raising quality. Judge it on its first real
+  use by the task's time to finish against the same work without it, and by
+  the defects it found per hour; one that multiplies the time is a failed
+  experiment, reported as such with the numbers, not a cost to push
+  through. Watch for the trap while running it, not only after: a step that
+  grows with every fix, or that keeps being made more thorough each time it
+  misses something, is the sign.
 - **[rule]** Before starting open-ended autonomous/background work, state
   (or elicit) an explicit, checkable stop condition, in the invocation or
   in the protocol it runs under; reaching the goal is one.
