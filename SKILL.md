@@ -472,7 +472,10 @@ doesn't state per-project.
 - **[lesson]** Carry code over from an old branch by first use, not by
   module: each commit takes only what its own code and tests call.
 - **[lesson]** Stage by content, never by directory, when a file serves
-  more than one commit.
+  more than one commit. A script that commits for you (an `exec` in a
+  rebase, a fixup helper) stages the files it wrote by name, never with
+  `-a` or `.`: those take whatever the worktree holds, a submodule's
+  checked-out pointer included.
 - **[lesson]** Before each commit, check that every symbol it adds
   (function, method, class, type, exported constant, settings field,
   container getter) has a user in the same commit; drop what nothing calls.
