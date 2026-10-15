@@ -524,6 +524,10 @@ doesn't state per-project.
   call before blaming credentials.
 - **[lesson]** Key a verdict on an exit status, never on a printed word,
   and use `set -o pipefail` when a pipeline's status matters.
+- **[lesson]** Give each shell action that changes state (a deletion, a commit, a rebase, a reset, a
+  write to a shared file) a command of its own, so the user approves and reads each one; combine
+  read-only checks freely. Never build a deletion's target from a variable that may be empty: write
+  the path out, or `${VAR:?}`.
 - **[lesson]** Confirm "pre-existing" failures against the main branch, in
   a separate worktree, not by stashing in a shared checkout.
 - **[lesson]** Work time, weekday and cursor expectations out by hand
