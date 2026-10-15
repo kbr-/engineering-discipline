@@ -635,5 +635,9 @@ doesn't state per-project.
 - **[lesson]** Fix a reviewer's finding about a claim everywhere the claim is stated: the other
   documents, the commit messages and the code comments, found by searching for its words.
 - **[lesson]** List leftover branches and worktrees for deletion.
+- **[lesson]** A precondition someone else must honour (a merge order, a sync before a step, a check
+  before a deploy) is handed over with what makes the wrong way impossible or loud: a Draft until
+  the step before lands, a merge-request dependency, a check that fails. A sentence in a description
+  waits on its reader's attention.
 - **[lesson]** Check the plan's and records' counts and status against the
   final state.
