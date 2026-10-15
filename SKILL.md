@@ -373,10 +373,14 @@ doesn't state per-project.
   hook, a warning before the hard rejection, output that can't be skipped) whose firing leads
   to a useful response; leave judgement calls to judgement.
 - **[rule]** Report status measured against the goal and the open items.
-- **[rule]** Never waste the user's wall-clock time: don't block while other work
-  is unblocked, don't idle on long waits, poll in short intervals that exit
-  as soon as the condition holds, keep timeouts short, and run independent
-  checks in parallel.
+- **[rule]** Never waste the user's wall-clock time: don't block while
+  other work is unblocked, don't idle on long waits, poll in short
+  intervals that exit as soon as the condition holds, keep timeouts short,
+  and run independent checks in parallel. In a long procedure, project the
+  rest from the rate measured so far (units done per hour against units
+  left) before each batch, and when the projection is more than the user
+  would plausibly accept, stop and bring the numbers and the options
+  instead of the next batch.
 
 ## Communication style
 
