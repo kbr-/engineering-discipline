@@ -526,8 +526,11 @@ doesn't state per-project.
   and use `set -o pipefail` when a pipeline's status matters.
 - **[lesson]** Give each shell action that changes state (a deletion, a commit, a rebase, a reset, a
   write to a shared file) a command of its own, so the user approves and reads each one; combine
-  read-only checks freely. Never build a deletion's target from a variable that may be empty: write
-  the path out, or `${VAR:?}`.
+  read-only checks freely. Name what such a command touches literally (a deletion's path, a rebase's
+  upstream, a reset's commit): a variable hides it from the user, from the guards and from you, and
+  an empty one can widen it. After an event that moves a boundary (a push, a merge, a grant ending),
+  work out again what each step of a routine in progress may touch before running it: a fixup
+  routine carried on after a push rewrote the commits just pushed.
 - **[lesson]** Confirm "pre-existing" failures against the main branch, in
   a separate worktree, not by stashing in a shared checkout.
 - **[lesson]** Work time, weekday and cursor expectations out by hand
