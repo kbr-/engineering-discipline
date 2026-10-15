@@ -508,6 +508,12 @@ doesn't state per-project.
   already has. No existing test of the code, or no CI service for the system it talks to, is a gap
   the task closes (add the service beside the ones CI already runs), never a reason to test around
   that system with fakes and built-in errors standing in for its own.
+- **[lesson]** A mechanism that everything passes through (a launcher, a wrapper, a shared hook) is
+  checked through every caller's real entry point, not through the unit you wrote: make what it must
+  prevent observable everywhere at once (every file it must not run replaced by one that reports
+  itself), and run what the other checks around it watch (a real write through every guard). A test
+  of the paths you had in mind passes the paths you didn't, and the new mechanism's own side effects
+  (a helper process, a held file) are seen first by its neighbours.
 - **[lesson]** In a theory reread, also read together every entry that
   touches one object (a lock, a table, a contract surface), and put your
   own new proposals through the same checklist before bringing them;
