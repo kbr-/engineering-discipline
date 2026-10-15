@@ -504,6 +504,10 @@ doesn't state per-project.
   belief. Where the state can't be produced, build the error as the library's source builds it, and
   read every path it reaches the code by (the failing call, a later poll or flush, a callback).
   Check a reviewer's proposed fix like any other claim before building it.
+- **[lesson]** Before writing a fix, state in one sentence the invariant it restores ("the same
+  repository gives the same key, however its path is spelled") and derive its cases from that
+  sentence: each side of every comparison it makes, each form of every value it reads. A fix and its
+  test written from the instance that failed cover that instance and pass the case beside it.
 - **[lesson]** Design tests from what the checking rules require, not from the tests the repository
   already has. No existing test of the code, or no CI service for the system it talks to, is a gap
   the task closes (add the service beside the ones CI already runs), never a reason to test around
