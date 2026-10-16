@@ -319,7 +319,9 @@ rest of the profile CLAUDE.md doesn't state per-project.
   timeouts short, and run independent checks in parallel. In a long procedure, project the rest from
   the rate measured so far (units done per hour against units left) before each batch, and when the
   projection is more than the user would plausibly accept, stop and bring the numbers and the
-  options instead of the next batch.
+  options instead of the next batch. A loop whose rounds keep finding the same class of defect in
+  one mechanism is the same sign with no units left to count: by the third such round, bring its
+  per-round counts and a design that removes the class rather than another form-by-form fix.
 
 ## Communication style
 
