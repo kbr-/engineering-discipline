@@ -412,6 +412,10 @@ rest of the profile CLAUDE.md doesn't state per-project.
 - **[lesson]** Before each commit, check that every symbol it adds (function, method, class, type,
   exported constant, settings field, container getter) has a user in the same commit; drop what
   nothing calls.
+- **[lesson]** State what a reader or a check covers by the definition you checked it against and
+  the forms it leaves out ("the list items CommonMark gives, not a table's rows"), never as "each
+  form" or "every case": a message that claimed every form a reviewer writes was disproved by the
+  next review's first table.
 - **[lesson]** Aim a fixup at the commit whose change it belongs to, not at the commit where the
   file's other code sits. Check `git diff --cached --stat` before each fixup. When a later step
   changes code an earlier commit added, commit that change as a `--fixup` of the earlier commit
@@ -486,6 +490,14 @@ rest of the profile CLAUDE.md doesn't state per-project.
   a known-good earlier call before blaming credentials.
 - **[lesson]** Key a verdict on an exit status, never on a printed word, and use `set -o pipefail`
   when a pipeline's status matters.
+- **[lesson]** Key a check on the property it guards, not on a stand-in that usually agrees with it
+  (a file's time for "reviewed after the fix", a run's time for "tested on what is committed", a
+  unit's absence for "can't still end"). Name the property in one sentence first, and write the test
+  where the stand-in holds and the property fails before the code. A commit's time stands in for
+  "reviewed this code" too, and a rebase or a commit made during the review breaks it: record the
+  state the check is about (a digest of the code reviewed) and compare that. A reader reused from
+  another tool is a stand-in when its purpose differs: a classifier of findings by their first tag,
+  reused to decide whether anything fails, passed a failure nested under a note.
 - **[lesson]** Give each shell action that changes state (a deletion, a commit, a rebase, a reset, a
   write to a shared file) a command of its own, so the user approves and reads each one; combine
   read-only checks freely. Name what such a command touches literally (a deletion's path, a rebase's
