@@ -448,6 +448,12 @@ rest of the profile CLAUDE.md doesn't state per-project.
   belief. Where the state can't be produced, build the error as the library's source builds it, and
   read every path it reaches the code by (the failing call, a later poll or flush, a callback).
   Check a reviewer's proposed fix like any other claim before building it.
+- **[lesson]** Close a promised item (a queued build's list of what it must do, a request, a plan's
+  step) only after reading each of its points against the changed code, one at a time. A fix checked
+  against the case that prompted it passes that case and leaves the item's other points undone, and
+  a closing note written from memory of the fix claims them anyway: an item asking that an answer
+  count "whatever other check blocks that stop" was closed on a fix that counted it in one case
+  only.
 - **[lesson]** Before writing a fix, state in one sentence the invariant it restores ("the same
   repository gives the same key, however its path is spelled") and derive its cases from that
   sentence: each side of every comparison it makes, each form of every value it reads. A fix and its
