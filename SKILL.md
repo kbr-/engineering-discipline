@@ -330,6 +330,12 @@ rest of the profile CLAUDE.md doesn't state per-project.
   that design as your recommendation, with its measured limits, not as one option filed beside the
   patching that goes on. The same holds for any check you run: one that covers part of what a rule
   names (some test files where it names the suite, one wording of a count) doesn't stand in for it.
+- **[lesson]** An order is a dependency, never the sequence you pictured. When you design a
+  procedure, a plan, a rule or a guard, each "after", "once" or "before" in it names the output the
+  later step reads from the earlier one; steps that read nothing of each other's run at the same
+  time. A requirement that two things stay apart (one reviewer not seeing another's report) is held
+  by keeping the one's output from the other, not by running them in turn: a review procedure that
+  ran its two independent reviews one after another cost every round the longer review's time.
 
 ## Communication style
 
