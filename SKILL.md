@@ -571,7 +571,9 @@ rest of the profile CLAUDE.md doesn't state per-project.
   user's own terminal) is checked again for the statement, and a number is copied from output, never
   estimated, above all in a case made for a decision: an argument's numbers (how long something
   took, how long the rest will take) are measured in the turn that makes it, since a vivid estimate
-  there decides more than anywhere else. The exception is an action the user reports having done
+  there decides more than anywhere else. The same holds for a number you only act on (a timeout, a
+  batch size, a wait): when the record holds its measurement, look it up before choosing it, since a
+  remembered number feels measured. The exception is an action the user reports having done
   themselves (a branch deleted, a ticket moved, a request fulfilled): their word is the record, so
   take it without a check.
 - **[lesson]** Take an endpoint's path from the code's route table before reading its status code as
