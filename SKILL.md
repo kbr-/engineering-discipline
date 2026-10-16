@@ -540,7 +540,11 @@ symptom. Every lesson below is an instance of this.
   never the hash. Where a stand-in still slips into a design, take the first time it costs a rerun
   or a refusal as the sign, not a cost of the work. A reader reused from another tool is a stand-in
   when its purpose differs: a classifier of findings by their first tag, reused to decide whether
-  anything fails, passed a failure nested under a note.
+  anything fails, passed a failure nested under a note. The same holds for decisions, not only
+  checks: a dependency pinned to "the version tested" stood in for "safe for what runs", and would
+  have rolled production back sixteen releases, the version running being on record; a setting
+  present in a render stood in for "it works", for a container that could not do its job. Ask of a
+  decision what it changes in what runs now, and of a setting what it does at run time.
 - **[lesson]** Give each shell action that changes state (a deletion, a commit, a rebase, a reset, a
   write to a shared file) a command of its own, so the user approves and reads each one; combine
   read-only checks freely. Name what such a command touches literally (a deletion's path, a rebase's
