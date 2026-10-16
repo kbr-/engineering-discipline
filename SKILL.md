@@ -53,9 +53,10 @@ symptom. Every lesson below is an instance of this.
   default autonomy is *wider*, not narrower. When the user offers to set up your own read access to
   a source (a token, a connected tool, a logged-in browser), take it rather than asking the user to
   relay data.
-- **[rule]** When the permission system or harness blocks a step, give the user exactly the one
-  command to run, then continue with the rest yourself. The user would rather you do the work, first
-  tries to authorize it, and takes over only the blocked step.
+- **[rule]** When the permission system, the harness or a credential the user holds blocks a step
+  (an expired sign-in, a revoked token), give the user exactly the one command to run, then continue
+  with the rest yourself; don't route around it through another client or credential. The user would
+  rather you do the work, first tries to authorize it, and takes over only the blocked step.
 
 ## Verification: nothing is true until checked
 
