@@ -513,9 +513,13 @@ rest of the profile CLAUDE.md doesn't state per-project.
   unit's absence for "can't still end"). Name the property in one sentence first, and write the test
   where the stand-in holds and the property fails before the code. A commit's time stands in for
   "reviewed this code" too, and a rebase or a commit made during the review breaks it: record the
-  state the check is about (a digest of the code reviewed) and compare that. A reader reused from
-  another tool is a stand-in when its purpose differs: a classifier of findings by their first tag,
-  reused to decide whether anything fails, passed a failure nested under a note.
+  state the check is about (a digest of the code reviewed) and compare that. A hash names one
+  rewrite of an unpushed commit, so it stands in for "this change" only until the next rebase:
+  reference such a commit by what a rebase preserves (its subject, its patch ID), and compare those,
+  never the hash. Where a stand-in still slips into a design, take the first time it costs a rerun
+  or a refusal as the sign, not a cost of the work. A reader reused from another tool is a stand-in
+  when its purpose differs: a classifier of findings by their first tag, reused to decide whether
+  anything fails, passed a failure nested under a note.
 - **[lesson]** Give each shell action that changes state (a deletion, a commit, a rebase, a reset, a
   write to a shared file) a command of its own, so the user approves and reads each one; combine
   read-only checks freely. Name what such a command touches literally (a deletion's path, a rebase's
