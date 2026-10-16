@@ -321,7 +321,10 @@ rest of the profile CLAUDE.md doesn't state per-project.
   projection is more than the user would plausibly accept, stop and bring the numbers and the
   options instead of the next batch. A loop whose rounds keep finding the same class of defect in
   one mechanism is the same sign with no units left to count: by the third such round, bring its
-  per-round counts and a design that removes the class rather than another form-by-form fix.
+  per-round counts and a design that removes the class rather than another form-by-form fix. Bring
+  that design as your recommendation, with its measured limits, not as one option filed beside the
+  patching that goes on. The same holds for any check you run: one that covers part of what a rule
+  names (some test files where it names the suite, one wording of a count) doesn't stand in for it.
 
 ## Communication style
 
