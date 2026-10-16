@@ -652,7 +652,11 @@ symptom. Every lesson below is an instance of this.
   the code and configuration, run where they can be, not only its description against the evidence.
   A review of the descriptions alone passes what the code gets wrong.
 - **[lesson]** Fix a reviewer's finding about a claim everywhere the claim is stated: the other
-  documents, the commit messages and the code comments, found by searching for its words.
+  documents, the commit messages and the code comments, found by searching for its words. The same
+  goes for any fact a decision of yours changes: before editing, list every place the task states it
+  (each branch, description, ledger, request and the plan), searching by the fact's value (a
+  version, a count, a name), not only the documents in hand: a pin changed in one merge request's
+  commit, description and ledger was left standing in a sibling's description.
 - **[lesson]** List leftover branches and worktrees for deletion.
 - **[lesson]** A precondition someone else must honour (a merge order, a sync before a step, a check
   before a deploy) is handed over with what makes the wrong way impossible or loud: a Draft until
