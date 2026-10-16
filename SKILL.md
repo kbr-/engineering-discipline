@@ -200,6 +200,12 @@ symptom. Every lesson below is an instance of this.
   complete.
 - **[rule]** Default to flat, non-nested, non-numbered document/list structure unless there's a real
   reason for nesting or numbering.
+- **[lesson]** Write each sentence for its reader's next action, not for your own record: a limit
+  you accept goes into the change's comment or description, where its reader weighs it, not only
+  into your plan; a description states what holds at the tip, not when and on which branch state you
+  checked it; a command goes where it can be pasted. Writing for the record put an accepted alert
+  gap in a plan nobody reviewing the change read, and filled four merge request descriptions with
+  the evidence's history.
 
 ## Git and change hygiene
 
@@ -213,10 +219,10 @@ symptom. Every lesson below is an instance of this.
 - **[rule]** Fold/squash noisy WIP history (a script replaced next commit, small incremental fixes)
   into clean history before considering it done.
 - **[rule]** When a test, fix, or file logically belongs with an earlier commit rather than the one
-  being made now, actually go fix it up into that earlier commit (`git commit --fixup=<hash>` + `git
-  rebase --autosquash`) and rewrite every commit after it as needed, so every resulting commit reads
-  as if it were correct from the start — no self-correction narrated across commits, no commit that
-  a later one fully supersedes. This is a hard default with no self-granted exceptions: not a
+  being made now, actually go fix it up into that earlier commit (`git commit --fixup=<hash>` +
+  `git rebase --autosquash`) and rewrite every commit after it as needed, so every resulting commit
+  reads as if it were correct from the start — no self-correction narrated across commits, no commit
+  that a later one fully supersedes. This is a hard default with no self-granted exceptions: not a
   per-case tradeoff against how many commits it touches or how much mechanical care it takes, and
   "this is just added coverage, not a correction of a mistake" is not an exception either. Only skip
   it on an explicit, in-conversation authorization to skip that specific instance. Check the
@@ -388,10 +394,10 @@ symptom. Every lesson below is an instance of this.
   production.
 - **[lesson]** Settle the source of truth and ownership with the stakeholders before implementing.
 - **[lesson]** List test and tooling dependencies up front and ask for every install approval at
-  once. Before installing any of them, resolve the whole set together without installing (`pip
-  install --dry-run --report`, or the package manager's equivalent), base packages such as torch
-  included, and install only once that resolution has the versions wanted: a pin found after the
-  base is installed means a rebuild.
+  once. Before installing any of them, resolve the whole set together without installing
+  (`pip install --dry-run --report`, or the package manager's equivalent), base packages such as
+  torch included, and install only once that resolution has the versions wanted: a pin found after
+  the base is installed means a rebuild.
 - **[lesson]** Before choosing a tool, read how CI and the Makefile install and test, the lockfile
   and `packageManager`. Before naming an environment variable, read the settings loader.
 - **[lesson]** Whether a tool for a job exists is a question about the ecosystem, not the
@@ -462,8 +468,8 @@ symptom. Every lesson below is an instance of this.
   right away, apart from the step's own files. To realign changes already committed in the wrong
   place, split each overfull commit where it stands and fold the pieces into their targets with
   fixups, rather than resetting the branch.
-- **[lesson]** A rebase todo script must fail when it matches nothing; the todo is written `pick
-  <hash> # <subject>`.
+- **[lesson]** A rebase todo script must fail when it matches nothing; the todo is written
+  `pick <hash> # <subject>`.
 - **[lesson]** When a decision changes, grep the branch's docs, runbooks, comments, commit messages
   and plan for text that depends on it, in the same edit. When code changes, grep for its changed
   lines too, in the evidence that quotes code (mutation specs, ledgers, saved replays) as well as
