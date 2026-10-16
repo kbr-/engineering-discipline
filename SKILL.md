@@ -143,6 +143,13 @@ symptom. Every lesson below is an instance of this.
   conversation to something else, finish what they asked, report, and wait; resume the earlier plan
   only when told to, even when its next step looks obviously unblocked. Background work you started
   (a push, a test run) is not idle time to fill with the next task.
+- **[lesson]** Before stopping work in progress (a subagent, a long run), weigh what it has already
+  cost against what stopping saves, and take the reading of the user's message that loses least: a
+  change asked for ("make them use the cheaper model") applies to the next run unless the user says
+  to throw away the running one. Two reviewers that had each read 200 thousand tokens were stopped
+  on a question about their model, in the message where the user said they were short of tokens.
+  Stopping stays a judgement: a run doing the wrong thing, or one a decision has superseded, is
+  stopped.
 - **[rule]** Explain your own jargon without being asked, and for every design choice you make, be
   ready to say what it gains.
 - **[rule]** Write product copy, errors and warnings for the end user: say what is happening, offer
