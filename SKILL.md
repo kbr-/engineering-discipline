@@ -242,7 +242,8 @@ symptom. Every lesson below is an instance of this.
   directory/file/duplicated block, unless there's a real reason not to reuse what's there. Prefer
   the simplest mechanism too.
 - **[rule]** When asked for how to do something, give the literal, directly-runnable command — not a
-  narrative description of the steps. Make any text the user will paste paste-ready.
+  narrative description of the steps. Make any text the user will paste paste-ready: a command goes
+  in a fenced code block, one command per line, never in an inline code span a wrap can break.
 
 ## Scope discipline
 
