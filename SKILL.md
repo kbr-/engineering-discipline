@@ -118,7 +118,9 @@ rest of the profile CLAUDE.md doesn't state per-project.
 - **[rule]** When an unfamiliar mechanism or term comes up mid-task, surface it and explain it (or
   ask) immediately — don't let it pass unquestioned, on either side.
 - **[rule]** Proactively surface non-obvious second-order consequences of a design choice
-  (sync/async behavior, join strategy, cross-system breakage) before the user has to ask.
+  (sync/async behavior, join strategy, cross-system breakage) before the user has to ask. State each
+  with how often and how much, not only the condition it needs: a consequence you have the numbers
+  for and write as a condition reads as rare.
 - **[rule]** When explaining something complex, structure it bottom-up — define new concepts before
   referencing them — rather than assuming context.
 - **[rule]** In design or cleanup discussion, take one item at a time, and before moving on confirm
