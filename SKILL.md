@@ -488,7 +488,8 @@ rest of the profile CLAUDE.md doesn't state per-project.
   reads) by running it. Before a fix to a reader, write down every part of its input that can change
   its verdict (where a tag stands, the words before it, what nests under it, which record or round
   is meant) and test each: a fix that makes the reported input pass leaves the part beside it for
-  the next review.
+  the next review. The size of the request doesn't set the size of that list: a one-word "do it" on
+  a fix to where a paragraph ended still needed where it started, which the next reply showed.
 - **[lesson]** Design tests from what the checking rules require, not from the tests the repository
   already has. No existing test of the code, or no CI service for the system it talks to, is a gap
   the task closes (add the service beside the ones CI already runs), never a reason to test around
