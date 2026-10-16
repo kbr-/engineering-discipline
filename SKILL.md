@@ -154,6 +154,11 @@ symptom. Every lesson below is an instance of this.
   on a question about their model, in the message where the user said they were short of tokens.
   Stopping stays a judgement: a run doing the wrong thing, or one a decision has superseded, is
   stopped.
+- **[lesson]** Read each message for the state the user will be in after it, and act on all of that
+  state in the turn, not only on the literal question: "can it be checkpointed?" from a user who
+  must leave asks also that what runs be stopped and what must survive be saved, and "how long?"
+  asks also what to do meanwhile. A background reviewer was left running past the user's "I must
+  close", its work already written off, until the user asked for it to be stopped.
 - **[rule]** Explain your own jargon without being asked, and for every design choice you make, be
   ready to say what it gains.
 - **[rule]** Write product copy, errors and warnings for the end user: say what is happening, offer
