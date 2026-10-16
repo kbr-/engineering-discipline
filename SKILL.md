@@ -101,7 +101,9 @@ symptom. Every lesson below is an instance of this.
 - **[rule]** Before building something new, check whether an artifact or mechanism for it already
   exists (a skill, a script, a config, an official image) and reuse it. The sentence that decides to
   build names the search made and what it found; a decision written before the search is the habit
-  this rule exists against.
+  this rule exists against. Search for what already does the job, not for a tool of the shape you
+  have in mind: a caller listing was built for a removal that a test of the caller already failed
+  on, and a type checker covers the rest.
 - **[lean]** To localize a failure, compare against a known-good reference environment: why doesn't
   it happen there?
 
@@ -223,6 +225,12 @@ symptom. Every lesson below is an instance of this.
   that's more work.
 - **[rule]** Name Python files with underscores, never hyphens: a hyphenated file can't be imported,
   so its tests and tools need workarounds to load it.
+- **[rule]** Give every function you add or change full type hints, its parameters and its return,
+  and keep the repository's type checker passing on what you touch: an unannotated function is one a
+  type checker skips. Follow the repository's own typing conventions where it has them.
+- **[rule]** Never run a program inline in committed code (`python3 -c`, a heredoc fed to an
+  interpreter): write a module and run it by its path. A program in a string is invisible to the
+  type checker, the tests and every search for its callers.
 - **[rule]** Prefer the smallest surgical diff against the existing artifact over a new
   directory/file/duplicated block, unless there's a real reason not to reuse what's there. Prefer
   the simplest mechanism too.
@@ -566,7 +574,13 @@ symptom. Every lesson below is an instance of this.
   Then attack it as a reviewer would: the cases it lets through, the new mistakes it invites, and
   what it does to the agents that read it: whatever goes into a model's context pulls on everything
   written after it, and an instruction placed beside it doesn't undo that pull. Change the design
-  where the attack lands, before anyone else has to find it.
+  where the attack lands, before anyone else has to find it. Before any of that, ask what already
+  catches the mistake: name the existing test, type checker or hook that would fail on it, run it on
+  the mistake, and weigh what the mistake cost. A mistake that cost nothing and that a check you
+  have already catches needs a sentence saying so, not new machinery. Where nothing catches it, look
+  first for a convention that lets a standard tool see the class (a module the type checker reads in
+  place of a string it can't) before writing a check of your own. And a question a check of a few
+  minutes settles is settled by running the check, never offered to the user as a question.
 - **[lesson]** A statement about several things (a global value from a search, "the list routes",
   "every space") holds only once checked for each one: read every hit, or name only the ones that
   hold. Name its domain in the text (which system, set and date) and check it at the widest reading
