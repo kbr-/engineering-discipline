@@ -450,9 +450,11 @@ rest of the profile CLAUDE.md doesn't state per-project.
   pass it, beyond what the inputs held so far (a branch named `-`, a list numbered instead of
   bulleted): a guard tested on the real forms alone passed both. A change that narrows a guard, to
   stop a refusal it made wrongly, is tested with the inputs the guard exists to refuse as well, and
-  a refusal added to a guard beside the harmless input next to it that must still pass. Before
-  running a fix's tests, read the changed function from its top with one input it must refuse and
-  one it must pass. Ask of each value a reader takes what else it could be in that place (a path
+  a refusal added to a guard beside the harmless input next to it that must still pass. Narrow such
+  a guard by exempting the harmless form it refused, never by rebuilding it from a list of the forms
+  that should refuse: the list lacks the form nobody thought of, which the default refusal caught.
+  Before running a fix's tests, read the changed function from its top with one input it must refuse
+  and one it must pass. Ask of each value a reader takes what else it could be in that place (a path
   where a branch is read, another repository where this one is meant, a program the reader doesn't
   know), and make a guard refuse what it can't classify rather than keep a list of what it knows
   complete. Where the input is a language (the shell, a record's tags), list its forms from the
