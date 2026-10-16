@@ -416,7 +416,10 @@ rest of the profile CLAUDE.md doesn't state per-project.
 - **[lesson]** A rebase todo script must fail when it matches nothing; the todo is written `pick
   <hash> # <subject>`.
 - **[lesson]** When a decision changes, grep the branch's docs, runbooks, comments, commit messages
-  and plan for text that depends on it, in the same edit.
+  and plan for text that depends on it, in the same edit. When code changes, grep for its changed
+  lines too, in the evidence that quotes code (mutation specs, ledgers, saved replays) as well as
+  the prose, and bring each to the new code in the same step: a sweep found a spec stale only after
+  running every spec before it.
 - **[lesson]** Rewrap prose with a tool (Vim's `gq`, `fmt`, Python's `textwrap`) over the whole
   paragraph, never by hand-placed line breaks, which leave ragged or overlong lines behind.
 - **[lesson]** Name a script that serves one library, tool or service after it
@@ -434,7 +437,30 @@ rest of the profile CLAUDE.md doesn't state per-project.
 - **[lesson]** Before writing a fix, state in one sentence the invariant it restores ("the same
   repository gives the same key, however its path is spelled") and derive its cases from that
   sentence: each side of every comparison it makes, each form of every value it reads. A fix and its
-  test written from the instance that failed cover that instance and pass the case beside it.
+  test written from the instance that failed cover that instance and pass the case beside it. List
+  the forms by searching the real inputs the code will read (the commands, files or records), not
+  from memory, and before you change what a reader accepts or refuses, run it over those inputs and
+  read what it now reads differently: a check made to refuse what it can't resolve, on a parser that
+  misread quoting, refused text as commands. A guard's tests also try what an input could hold to
+  pass it, beyond what the inputs held so far (a branch named `-`, a list numbered instead of
+  bulleted): a guard tested on the real forms alone passed both. A change that narrows a guard, to
+  stop a refusal it made wrongly, is tested with the inputs the guard exists to refuse as well, and
+  a refusal added to a guard beside the harmless input next to it that must still pass. Before
+  running a fix's tests, read the changed function from its top with one input it must refuse and
+  one it must pass. Ask of each value a reader takes what else it could be in that place (a path
+  where a branch is read, another repository where this one is meant, a program the reader doesn't
+  know), and make a guard refuse what it can't classify rather than keep a list of what it knows
+  complete. Where the input is a language (the shell, a record's tags), list its forms from the
+  language's definition, every way it can ask for the guarded effect included (a backtick beside
+  `$(...)`, an option that stashes beside the stash command), not from the forms seen: open that
+  definition (the manual's option list, the loader's code) in the step that writes the fix, and name
+  it in the test beside the forms it gave, since a list written from a reviewer's examples stops
+  where they did. Apply such a lesson in the same change to every guard and gate the change adds,
+  not only to the one a finding named, and check a sentence about how code runs (which copy a loader
+  reads) by running it. Before a fix to a reader, write down every part of its input that can change
+  its verdict (where a tag stands, the words before it, what nests under it, which record or round
+  is meant) and test each: a fix that makes the reported input pass leaves the part beside it for
+  the next review.
 - **[lesson]** Design tests from what the checking rules require, not from the tests the repository
   already has. No existing test of the code, or no CI service for the system it talks to, is a gap
   the task closes (add the service beside the ones CI already runs), never a reason to test around
