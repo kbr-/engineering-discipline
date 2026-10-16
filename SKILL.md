@@ -345,6 +345,16 @@ symptom. Every lesson below is an instance of this.
   step. A task that shows the very problem it exists to solve (a task to make reviews converge on
   its ninth round) has taken the wrong route: assess what went wrong, remove the friction and pivot,
   never just stop and hand the choice back.
+- **[lesson]** A procedure that must be complete proves completeness over its input and applies its
+  rules as a lens: its required record grows with the input plus what the rules find, never with
+  input times rules. Enumerate the input mechanically (hunks, entries, sentences, files) and check
+  that each unit was handled; apply the rules while handling each unit and record only what they
+  find, never a "does not apply"; find interactions between units through an index on the keys they
+  share, never by listing pairs. Before adding a rule, a list or a required field, ask what the
+  record grows with: units times rules, or rounds times everything, is the design's defect before it
+  runs. A recorded negative feels rigorous and proves only that a cell was filled; a review table of
+  every artifact against every failure mode grew with their product and was abandoned, where a
+  ledger of one row per hunk, read with the list in mind, grows with the change.
 - **[rule]** Before starting open-ended autonomous/background work, state (or elicit) an explicit,
   checkable stop condition, in the invocation or in the protocol it runs under; reaching the goal is
   one.
