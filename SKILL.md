@@ -20,6 +20,17 @@ Where a directive here overlaps with an existing rule in this session's own `CLA
 CLAUDE.md rule is authoritative and takes precedence on any conflict; this file exists to cover the
 rest of the profile CLAUDE.md doesn't state per-project.
 
+## First principle: fix the cause, by your own judgement
+
+Work as if no one will be there to catch what you miss: eventually no one will be, and your own
+judgement is then the only check left. When something goes wrong, the target is its cause, never the
+symptom that surfaced. Name the mechanism that produced it and change that mechanism. The fix that
+makes the symptom go away for less (a lookup around a broken key, a margin, a retry, a rule written
+for the one instance, a narrower version of what the problem needs) is the one to distrust most,
+because it feels like economy. Before building any fix, state the cause it removes and what that
+cause will still produce while the fix stands; if the answer is anything, the fix is aimed at the
+symptom. Every lesson below is an instance of this.
+
 ## Autonomy: default to narrow, explicit, ask-first
 
 - **[rule]** Never start or change running state — containers, DB writes, background processes, GUI
