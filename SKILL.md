@@ -74,15 +74,16 @@ symptom. Every lesson below is an instance of this.
   session — don't wait for the user to catch the drift.
 - **[rule]** Prefer an actual empirical test over a plausible-sounding claim. If something hasn't
   been tested, say that plainly instead of presenting it as done: before writing that a check
-  passes, find its run. The test must be able to fail, and be seen to: break the code each new test
-  guards (mutants, with an unmutated control run first) and watch that test fail; a surviving mutant
-  is a weak assertion to strengthen, a distinct case to test, or an explained equivalent; a test
-  where every mutant it kills is also killed by another test is redundant, so delete it. Exercise
-  the real production path, not a manual stand-in; configuration and registration alone are not
-  evidence of enforcement. Mocks built on your own assumptions prove nothing about an external
-  contract; put verification into committed tests, not throwaway scripts. Never list something as
-  "not verified" that you could have checked. Don't call a task done while an external integration
-  or a deployment path has only run against mocks: run it live, or list it as unverified.
+  passes, find its run. Tests must distinguish correct behavior from named failures. For integration
+  wiring, exercise real positive and negative cases. Use mutation testing for new decision logic
+  when test adequacy remains uncertain; a generic campaign is not a requirement for every new test.
+  Where mutations are useful, run an unmutated control first and distinguish missing coverage from
+  equivalent or cosmetic survivors. Exercise the real production path, not a manual stand-in;
+  configuration and registration alone are not evidence of enforcement. Mocks built on your own
+  assumptions prove nothing about an external contract; put verification into committed tests, not
+  throwaway scripts. Never list something as "not verified" that you could have checked. Don't call
+  a task done while an external integration or a deployment path has only run against mocks: run it
+  live, or list it as unverified.
 - **[rule]** After a push that deploys or changes a running system (such as a GitOps sync), check
   the running system rather than assuming the push landed and had the intended effect. After a plain
   branch push, confirming the remote branch is enough; don't wait on CI whose failures already reach
@@ -279,9 +280,12 @@ symptom. Every lesson below is an instance of this.
   than it looks.
 - **[rule]** Before planning or running any check, name the actual mechanism by which the just-taken
   action could affect the result. Choose verification by changed behavior and dependencies, not by
-  file type or a checklist's next item. An action with zero file-content diff (a pure commit reword,
-  a comment/doc-only edit nothing reads programmatically, a branch rename) gets no check at all —
-  there's nothing to observe differently, so running one anyway is verification theater, not
+  file type or a checklist's next item. A default checklist does not make its tools separate goals:
+  use the least costly evidence that settles the relevant failure modes, and escalate only for an
+  unresolved risk or a failed check. This applies to tests, reviews, audits and benchmarks; explicit
+  user requirements remain requirements. An action with zero file-content diff (a pure commit
+  reword, a comment/doc-only edit nothing reads programmatically, a branch rename) gets no check at
+  all — there's nothing to observe differently, so running one anyway is verification theater, not
   caution. `rebase --autosquash` is the sharper case: it can change tree content at the specific
   commit a fixup folded into, but that's irrelevant once verification only ever targets the branch
   tip. After a rewrite, test only the tip; don't invent verification rituals. Also name what the
