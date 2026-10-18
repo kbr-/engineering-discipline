@@ -316,6 +316,11 @@ symptom. Every lesson below is an instance of this.
 
 ## Delegation and task framing
 
+- **[lesson]** Judge automation from the caller's complete workflow, not the existence of a wrapper.
+  Before declaring it done, walk the caller's remaining setup, execution, retries and
+  interpretation. Put repeatable mechanical work in the tool; leave only semantic judgement and
+  genuinely project-specific decisions to its caller, and state those boundaries explicitly.
+
 - **[rule]** When the user has already worked something out, scope your task to checking it, not
   re-deriving it — respect an explicit verify-not-derive boundary.
 - **[rule]** If you've done unrequested extra work beyond what was scoped, expect a correction — so
