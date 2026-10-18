@@ -141,10 +141,12 @@ symptom. Every lesson below is an instance of this.
 - **[rule]** In design or cleanup discussion, take one item at a time, and before moving on confirm
   everything outstanding is resolved and recorded. An approved plan is the exception: execute it
   autonomously, without asking per step.
-- **[lesson]** Approval to run a plan doesn't survive a redirection. Once the user takes the
-  conversation to something else, finish what they asked, report, and wait; resume the earlier plan
-  only when told to, even when its next step looks obviously unblocked. Background work you started
-  (a push, a test run) is not idle time to fill with the next task.
+- **[lesson]** Distinguish a replacement request from a side question during authorized work. Answer
+  an informational or status question and continue the active request in the same turn; answering
+  the latest message does not complete the requested artifact. Stop or switch when the user
+  explicitly pauses, cancels or replaces the work, or its completion/blocking condition holds. A
+  genuine redirection ends the earlier authorization; do not resume it without instruction or use a
+  background wait to begin unrelated work.
 - **[lesson]** Before stopping work in progress (a subagent, a long run), weigh what it has already
   cost against what stopping saves, and take the reading of the user's message that loses least: a
   change asked for ("make them use the cheaper model") applies to the next run unless the user says
