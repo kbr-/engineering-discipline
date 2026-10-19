@@ -90,7 +90,11 @@ symptom. Every lesson below is an instance of this.
   the user.
 - **[rule]** Before concluding that anything is absent, unavailable or impossible (a capability, a
   tool, a persisted grant, access to a page), check the source that settles it: docs, the web, the
-  transcript, the live system, or a real attempt.
+  transcript, the live system, or a real attempt. That a behaviour is absent ("it logs nothing", "X
+  is off") is settled by a search for the concern in the system's own terms, never by the one
+  mechanism you looked for: an API's access log was called off from the server's logger, while the
+  app's own request logger logged every request. A find that fits the case you are building is the
+  moment to look once more for what contradicts it.
 - When a symptom recurs, check whether it matches something already root-caused earlier before
   re-diagnosing from scratch.
 - **[rule]** Investigate every unexplained anomaly in output, even one mentioned in passing (a count
