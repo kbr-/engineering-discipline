@@ -96,7 +96,9 @@ symptom. Every lesson below is an instance of this.
 - **[rule]** Investigate every unexplained anomaly in output, even one mentioned in passing (a count
   of zero, a changed port, a slow run); don't pass over it.
 - **[rule]** When you find a defect, sweep for the whole class of it everywhere else it could be,
-  and fix all of them. A check built to catch it targets the class too: name the class by its
+  and fix all of them. Take the sweep's dimensions from the defect's mechanism, not from where you
+  found it: a setting shared by every release is swept over every release, not only over the
+  environments in view. A check built to catch it targets the class too: name the class by its
   mechanism, not by the instance you hit, run the candidate check over a real corpus (the
   repository's merged history) and read its hits and misses before settling its scope. A claim about
   what a check can or can't do is measured the same way before you state it.
