@@ -160,6 +160,11 @@ symptom. Every lesson below is an instance of this.
   Before handing an artifact over, ask the first questions its reviewer will ask about it (how big
   it is, how it compares with its kind, why it differs) and answer them from measurement: an
   existing dashboard read for where a new one goes left unread how the new one compares with it.
+- **[lesson]** When a gate of your own refuses, ask first whether the property it guards changed,
+  before doing what it asks: a refusal where the property holds is the gate's defect, fixed then,
+  not a cost to pay. A push gate asked for a fresh review round after a rebase that left the
+  branch's diff the same, and two reviewers were started before the user asked why it counted as a
+  change.
 - **[lesson]** Close a step (a deletion, a push, a request resolved) from the plan's view, not the
   step's own: before it, read what the plan still needs from what the step removes, and what has
   moved since the step was decided. A cookie file was deleted while checks after a pending merge
