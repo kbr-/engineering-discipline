@@ -356,7 +356,10 @@ symptom. Every lesson below is an instance of this.
   and tokens spent against the task's size, looked at from above at intervals rather than step by
   step. A task that shows the very problem it exists to solve (a task to make reviews converge on
   its ninth round) has taken the wrong route: assess what went wrong, remove the friction and pivot,
-  never just stop and hand the choice back.
+  never just stop and hand the choice back. Once the design decides behavior, build the next small
+  artifact before elaborating interfaces or process. Reopen design only for an observed
+  contradiction or an undecided behavior that changes the artifact; choosing an implementation shape
+  is not another research phase.
 - **[lesson]** A procedure that must be complete proves completeness over its input and applies its
   rules as a lens: its required record grows with the input plus what the rules find, never with
   input times rules. Enumerate the input mechanically (hunks, entries, sentences, files) and check
@@ -445,7 +448,11 @@ symptom. Every lesson below is an instance of this.
   field), and bound every such value that becomes an identifier: a metric label, a key, a file or
   table name. A label taking the HTTP method as sent let any client add metric series without limit.
 - **[lesson]** Settle who sees each UI element before placing it.
-- **[lesson]** Every mechanism a decision names maps to a step, or is marked out of scope.
+- **[lesson]** Every mechanism a decision names maps to a step, or is marked out of scope. An
+  implementation increment delivers one independently verifiable artifact, with its acceptance
+  evidence; a workstream containing several such artifacts is split before execution. Report
+  completed increments from that artifact list, preserving unfinished integration and original
+  acceptance obligations when splitting it.
 - **[lesson]** After a redesign, re-check every requirement in the ticket.
 - **[lesson]** Probe the real values of any external attribute the code parses, and the comparison
   semantics of any external query language a cursor relies on. Don't implement on a checkable
