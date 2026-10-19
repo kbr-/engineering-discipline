@@ -160,6 +160,10 @@ symptom. Every lesson below is an instance of this.
   Before handing an artifact over, ask the first questions its reviewer will ask about it (how big
   it is, how it compares with its kind, why it differs) and answer them from measurement: an
   existing dashboard read for where a new one goes left unread how the new one compares with it.
+- **[lesson]** State a check's result in its output's terms: a diff as what differs and why, a count
+  as the count, never as a verdict the output doesn't print ("matches", "clean"). A rebased branch
+  was reported as matching a plain merge whose diff against it listed 11 files: the conflict markers
+  removed and both sides kept, which is what the comparison showed.
 - **[lesson]** When a gate of your own refuses, ask first whether the property it guards changed,
   before doing what it asks: a refusal where the property holds is the gate's defect, fixed then,
   not a cost to pay. A push gate asked for a fresh review round after a rebase that left the
