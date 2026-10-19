@@ -388,12 +388,11 @@ symptom. Every lesson below is an instance of this.
   that design as your recommendation, with its measured limits, not as one option filed beside the
   patching that goes on. The same holds for any check you run: one that covers part of what a rule
   names (some test files where it names the suite, one wording of a count) doesn't stand in for it.
-- **[lesson]** An order is a dependency, never the sequence you pictured. When you design a
-  procedure, a plan, a rule or a guard, each "after", "once" or "before" in it names the output the
-  later step reads from the earlier one; steps that read nothing of each other's run at the same
-  time. A requirement that two things stay apart (one reviewer not seeing another's report) is held
-  by keeping the one's output from the other, not by running them in turn: a review procedure that
-  ran its two independent reviews one after another cost every round the longer review's time.
+- **[lesson]** An order is a dependency, never the sequence you pictured. Every imposed order names
+  the output the later step consumes; independent work runs together within the resource budget. A
+  failed test, approval service or commit gate blocks its dependent artifact, not the rest of
+  implementation. Reassess what can still be built before declaring the whole task blocked. Keep
+  review inputs isolated by access, not by serial execution.
 
 ## Communication style
 
@@ -470,8 +469,9 @@ symptom. Every lesson below is an instance of this.
 
 ### Writing commits
 
-- **[lesson]** Write the branch in commit order: commit each step before writing the next, so a
-  shared file grows one commit at a time.
+- **[lesson]** Build dependent layers in commit order so shared files grow coherently. A pending
+  verification or commit gate does not serialize independent implementation: keep its changes
+  separable, finish what can proceed, and verify each artifact before landing it.
 - **[lesson]** Carry code over from an old branch by first use, not by module: each commit takes
   only what its own code and tests call.
 - **[lesson]** Stage by content, never by directory, when a file serves more than one commit. A
