@@ -536,7 +536,8 @@ aimed at the symptom. Every lesson below is an instance of this.
   nothing that an existing check catches needs a sentence saying so. Where nothing catches it, look
   first for a convention letting a standard tool see the class (a module the type checker reads
   where a string hides the code). Settle a question a check of a few minutes answers by running the
-  check.
+  check. A check reading what can be gone when it runs (an object git prunes, a file, a session)
+  refuses or reports when it is gone; write that branch with the check.
 - **[lesson]** A statement about several things (a value from a search, "the list routes", "every
   space") holds once checked for each: read every hit, or name only the ones that hold. Name its
   domain in the text (which system, set and date) and check it at the widest reading a reader could
