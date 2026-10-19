@@ -466,6 +466,12 @@ symptom. Every lesson below is an instance of this.
 
 ### Design
 
+- **[lesson]** Settle a requirement by the use it serves, not by its plumbing: ask what its reader
+  does with it at the moment it matters, and check that the moment produces it. "Logs" settled as
+  "every container's lines reach the log store" left most of an API's handled server errors with no
+  line saying what failed; an alert settled as "the rule fires" reached no channel until routing was
+  added at the end. Delivery, existence and rendering are where such a check starts, not where it
+  ends.
 - **[lesson]** A recommendation follows from its diagnosis: the option you recommend removes the
   cause your own diagnosis named. Where that option costs more (tokens, time, a larger build), state
   the cost and recommend it anyway, unless the user set a budget; an option that leaves the named
