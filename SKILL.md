@@ -160,6 +160,13 @@ symptom. Every lesson below is an instance of this.
   Before handing an artifact over, ask the first questions its reviewer will ask about it (how big
   it is, how it compares with its kind, why it differs) and answer them from measurement: an
   existing dashboard read for where a new one goes left unread how the new one compares with it.
+- **[lesson]** Make an artifact of a kind your rules define (a ledger, a request, a review file, a
+  commit message) from the rule that defines it, never from the nearest instance: an instance holds
+  its own date's version and deviations, and none of the steps that made it, such as the check that
+  came before each sentence. Before writing one, open the rule; where the rule is only prose, give
+  it a generator or a check, so the format has one home that tools read. Copy a sibling only for
+  what no rule states. Two commit messages written without their ledgers were about to get one
+  copied from another task's, when the protocol already set its columns and its order of work.
 - **[lesson]** Read each message for the state the user will be in after it, and act on all of that
   state in the turn, not only on the literal question: "can it be checkpointed?" from a user who
   must leave asks also that what runs be stopped and what must survive be saved, and "how long?"
