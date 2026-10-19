@@ -160,6 +160,11 @@ symptom. Every lesson below is an instance of this.
   Before handing an artifact over, ask the first questions its reviewer will ask about it (how big
   it is, how it compares with its kind, why it differs) and answer them from measurement: an
   existing dashboard read for where a new one goes left unread how the new one compares with it.
+- **[lesson]** Close a step (a deletion, a push, a request resolved) from the plan's view, not the
+  step's own: before it, read what the plan still needs from what the step removes, and what has
+  moved since the step was decided. A cookie file was deleted while checks after a pending merge
+  still needed its session, and a push was nearly made of a fix whose premise a colleague's merge
+  had removed an hour earlier.
 - **[lesson]** Make an artifact of a kind your rules define (a ledger, a request, a review file, a
   commit message) from the rule that defines it, never from the nearest instance: an instance holds
   its own date's version and deviations, and none of the steps that made it, such as the check that
