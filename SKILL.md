@@ -154,6 +154,10 @@ symptom. Every lesson below is an instance of this.
   on a question about their model, in the message where the user said they were short of tokens.
   Stopping stays a judgement: a run doing the wrong thing, or one a decision has superseded, is
   stopped.
+- **[lesson]** A fact checked along the one dimension a decision needed is checked only there.
+  Before handing an artifact over, ask the first questions its reviewer will ask about it (how big
+  it is, how it compares with its kind, why it differs) and answer them from measurement: an
+  existing dashboard read for where a new one goes left unread how the new one compares with it.
 - **[lesson]** Read each message for the state the user will be in after it, and act on all of that
   state in the turn, not only on the literal question: "can it be checkpointed?" from a user who
   must leave asks also that what runs be stopped and what must survive be saved, and "how long?"
