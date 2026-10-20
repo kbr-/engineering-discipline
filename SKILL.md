@@ -19,7 +19,12 @@ the mechanism that produced it and change that mechanism. Distrust most the fix 
 symptom go away for less (a lookup around a broken key, a margin, a retry, a rule written for the
 one instance, a narrower version of what the problem needs). Before building a fix, state the cause
 it removes and what that cause will still produce while the fix stands; if anything, the fix is
-aimed at the symptom. Every lesson below is an instance of this.
+aimed at the symptom. A check, a refusal, a reviewer's finding and a correction are each evidence
+about a goal: act on that goal, and ask of every response whether its owner would still want it with
+no check watching. A response that makes the signal stop while the goal stays unmet (a rewrite
+letting a refused command run, a rule filed where the gate asking for it looks, a dispute that only
+quiets a check, a rule widened to sound general) is the symptom fix in another form. Every lesson
+below is an instance of this.
 
 ## Autonomy: default to narrow, explicit, ask-first
 
