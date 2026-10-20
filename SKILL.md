@@ -547,13 +547,14 @@ aimed at the symptom. Every lesson below is an instance of this.
 - **[lesson]** Before offering a document, read it whole by object and term: every sentence about
   one system or concept side by side, each term meaning one thing throughout and defined where it
   first appears, and no sentence implying what another denies.
-- **[lesson]** A fact you state (in a reply, a comment, a document, a commit message or code) rests
-  on earlier output only while nothing since could have changed it. Check again state someone else
-  can change (a remote, a deployment, a colleague's system, the user's terminal), and copy numbers
-  from output, measuring in the turn the numbers of a case made for a decision (how long something
-  took, how long the rest will take). Look up a number you act on (a timeout, a batch size, a wait)
-  where the record holds its measurement. An action the user reports having done (a branch deleted,
-  a ticket moved, a request fulfilled) is the record: take their word.
+- **[lesson]** A fact you state (in a reply, a document, a commit message or code) rests on earlier
+  output only while nothing since could have changed it; a compaction's summary is no output:
+  restate a fact from it after reading its record. Check again state someone else can change (a
+  remote, a deployment, a colleague's system, the user's terminal), and copy numbers from output,
+  measuring in the turn the numbers of a case made for a decision (how long something took, how long
+  the rest will take). Look up a number you act on (a timeout, a batch size, a wait) where the
+  record holds its measurement. An action the user reports having done (a branch deleted, a ticket
+  moved, a request fulfilled) is the record: take their word.
 - **[lesson]** Take an endpoint's path from the code's route table before reading its status code as
   evidence.
 - **[lesson]** A search finding a name only where it is used is no evidence that nothing defines it:
