@@ -135,7 +135,10 @@ aimed at the symptom. Every lesson below is an instance of this.
 - **[lesson]** State a check's result in its output's terms: a diff as what differs and why, a count
   as the count. Never state a verdict the output doesn't print ("matches", "clean").
 - **[lesson]** When a gate of your own refuses, first ask whether the property it guards changed; a
-  refusal where the property holds is the gate's defect, fixed then.
+  refusal where the property holds is the gate's defect, fixed then. A refusal where it fails is a
+  symptom of how you produced the text: after fixing the instance, change what you read or run
+  before writing (a generator, a template, a rule loaded at that step) so the gate stops firing; a
+  reply that only satisfies the refusal leaves the next one coming.
 - **[lesson]** Close a step (a deletion, a push, a resolved request) from the plan's view: first
   read what the plan still needs from what the step removes, and what has moved since the step was
   decided.
