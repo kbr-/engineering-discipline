@@ -516,14 +516,15 @@ aimed at the symptom. Every lesson below is an instance of this.
 - **[lesson]** Test scheduled or framework-invoked code through the real scheduler or framework
   entry point.
 - **[lesson]** Measure before blaming slowness on a mode or environment.
-- **[lesson]** Reproduce a failure that comes and goes by forcing what it depends on; repeating the
-  run under load or widening a budget finds it by chance. Where the suspect is one measured value (a
-  timing the code estimates from, a clock read), fix that value in the test and show both sides: the
-  value that fails every time and the one that passes. Where the suspect is an order of events, add
-  short random sleeps and trace prints at each suspect place, run until it fails, read the trace for
-  the failing order, and force that order (a barrier, an event, a condition variable) so it fails
-  every time. Fix the cause the forced run shows, and keep the forcing in the test guarding it.
-  Before rerunning a run that hung, read where it stands: its threads' stacks, its log.
+- **[lesson]** Reproduce a failure that comes and goes, and show its fix, by forcing what it depends
+  on: the forced run fails the old code and passes the new. Repeating a run under load or widening a
+  budget decides either by chance. Where the suspect is one measured value (a timing the code
+  estimates from, a clock read), fix that value in the test and show both sides: the value that
+  fails every time and the one that passes. Where the suspect is an order of events, add short
+  random sleeps and trace prints at each suspect place, run until it fails, read the trace for the
+  failing order, and force that order (a barrier, an event, a condition variable) so it fails every
+  time. Fix the cause the forced run shows, and keep the forcing in the test guarding it. Before
+  rerunning a run that hung, read where it stands: its threads' stacks, its log.
 - **[lesson]** Hold a prevention you add for your own mistake (a rule, a check, a hook, a tool) to
   the standard of a fix: it finds or forces the cause of the class. One catching the class by chance
   (a repeated run, a wider margin, a retry) is a workaround in the rules; use one only where nothing
