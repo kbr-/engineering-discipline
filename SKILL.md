@@ -201,8 +201,7 @@ aimed at the symptom. Every lesson below is an instance of this.
   nothing else. Cut commits correctly as you write them (Writing commits, below). Lower-layer code
   with its tests, added for a later commit, gets a commit of its own, its message motivated by what
   will build on it; it never rides in a commit that doesn't use it.
-- **[rule]** Fold noisy WIP history (a script replaced the next commit, small incremental fixes)
-  into clean history before calling the work done.
+- **[rule]** Fold noisy WIP history into clean history before calling the work done.
 - **[rule]** Fold a test, fix or file that belongs with an earlier commit into it
   (`git commit --fixup=<hash>`, then `git rebase --autosquash`), rewriting every later commit as
   needed, so each commit reads as correct from the start: no self-correction narrated across
@@ -511,8 +510,8 @@ aimed at the symptom. Every lesson below is an instance of this.
   step of a routine in progress may touch.
 - **[lesson]** Confirm "pre-existing" failures against the main branch in a separate worktree;
   stashing in a shared checkout disturbs it.
-- **[lesson]** Work time, weekday and cursor expectations out by hand before asserting them in a
-  test.
+- **[lesson]** Work out by hand each time, weekday or cursor expectation you assert or state; a
+  worst case adds every step still blocking after a deadline's last check.
 - **[lesson]** Test scheduled or framework-invoked code through the real scheduler or framework
   entry point.
 - **[lesson]** Measure before blaming slowness on a mode or environment.
