@@ -458,7 +458,8 @@ aimed at the symptom. Every lesson below is an instance of this.
   before building it.
 - **[lesson]** Close a promised item (a queued build's list of what it must do, a request, a plan's
   step) only after reading each of its points against the changed code, one at a time; a fix checked
-  against its prompting case leaves the other points undone.
+  against its prompting case leaves the other points undone. Where the request names places
+  ("wherever", "every"), each place the problem occurs is a point: list them from the evidence.
 - **[lesson]** Before writing a fix, state in one sentence the invariant it restores ("the same
   repository gives the same key, however its path is spelled") and derive its cases from it: each
   side of every comparison it makes, each form of every value it reads. List the forms by searching
