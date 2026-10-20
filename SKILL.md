@@ -377,7 +377,9 @@ aimed at the symptom. Every lesson below is an instance of this.
 
 - **[lesson]** Settle a requirement by the use it serves: ask what its reader does with it when it
   matters, and check that the moment produces it. Delivery, existence and rendering start that check
-  (that logs reach the store, that a rule fires); they don't end it.
+  (that logs reach the store, that a rule fires); they don't end it. Settle a mechanism the user
+  proposes by the purpose they state for it: check each part of the design against that purpose
+  before offering it.
 - **[lesson]** A recommendation removes the cause your diagnosis named. Where that option costs more
   (tokens, time, a larger build), state the cost and recommend it anyway unless the user set a
   budget; offer an option leaving the cause standing as that, never as the recommendation. A cheaper
