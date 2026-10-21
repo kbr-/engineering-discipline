@@ -336,7 +336,8 @@ an instance of this.
   stop condition; reaching the goal is one.
 - **[rule]** In autonomous work, never stop, park, wait for a decision or give up on your own
   judgement while work remains: find a new angle and continue. Stopping is the user's call or the
-  stated condition's.
+  stated condition's. Filing a hard step as the user's choice, or as impossible, is giving up: name
+  the mechanisms tried, settle the impossibility at its source, and keep building another.
 - **[rule]** When an agent keeps breaking a written rule, enforce it with a minimal check (a hook, a
   warning before the rejection, output that can't be skipped) whose firing leads to a useful
   response; leave judgement calls to judgement.
