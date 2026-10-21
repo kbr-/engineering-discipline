@@ -140,7 +140,8 @@ an instance of this.
   big it is, how it compares with its kind, why it differs) and answer them from measurement; a fact
   checked along one dimension is checked only there.
 - **[lesson]** State a check's result in its output's terms: a diff as what differs and why, a count
-  as the count. Never state a verdict the output doesn't print ("matches", "clean").
+  as the count. Never state a verdict the output doesn't print ("matches", "clean"). Run it at the
+  depth set before its first result (a replay count, a sample), however early a difference shows.
 - **[lesson]** When a gate of your own refuses, first ask whether the property it guards changed; a
   refusal where the property holds is the gate's defect, fixed then. A refusal where it fails is a
   symptom of how you produced the text: after fixing the instance, change what you read or run
