@@ -426,6 +426,11 @@ an instance of this.
   change the behaviour. A refusal for a forgotten option is that answer: make it the default.
 - **[lesson]** When code stops a repeating async task (polling, a debounced search, a cancelled
   fetch), drop the results of calls still in flight, and test that by resolving one after the stop.
+- **[lesson]** Build a model judge as a hybrid. Before the call, give it the facts a tool can know
+  (what the steps it judges printed, which names are the project's own); after it, check its verdict
+  against its input (the quote it blocks on stands in that input). Let a judge that refuses err
+  toward passing. Keep every refusing verdict's input, and change a judge only when replaying the
+  kept inputs shows the change turns the wrong verdicts and keeps the right ones.
 
 ### Writing commits
 
