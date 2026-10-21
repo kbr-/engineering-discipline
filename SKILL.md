@@ -423,7 +423,7 @@ an instance of this.
 - **[lesson]** Before proposing anything that runs on every turn or request (a hook, a per-commit
   check, a call in a loop), time it on a real input and state the latency with the proposal.
 - **[lesson]** Before adding an option, ask whether every caller wants the new behaviour; if all do,
-  change the behaviour.
+  change the behaviour. A refusal for a forgotten option is that answer: make it the default.
 - **[lesson]** When code stops a repeating async task (polling, a debounced search, a cancelled
   fetch), drop the results of calls still in flight, and test that by resolving one after the stop.
 
