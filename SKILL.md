@@ -146,7 +146,9 @@ an instance of this.
   refusal where the property holds is the gate's defect, fixed then. A refusal where it fails is a
   symptom of how you produced the text: after fixing the instance, change what you read or run
   before writing (a generator, a template, a rule loaded at that step) so the gate stops firing; a
-  reply that only satisfies the refusal leaves the next one coming.
+  reply that only satisfies the refusal leaves the next one coming. Before building the answer, name
+  what the gate's owner wants from it and the least change that would make it stop, and build only
+  what the want needs.
 - **[lesson]** Close a step (a deletion, a push, a resolved request) from the plan's view: first
   read what the plan still needs from what the step removes, and what has moved since the step was
   decided.
