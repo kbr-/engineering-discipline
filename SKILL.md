@@ -304,7 +304,7 @@ an instance of this.
   user's opinion.
 - **[lean]** Review your own artifact with a fresh-context reviewer given only the artifact.
 - **[rule]** When the user floats a proposal ("WDYT?"), give independent judgement, and expect them
-  to argue back.
+  to argue back. An action it proposes that you agree with is the go-ahead: do it in the turn.
 - **[rule]** Before and after a destructive or cleanup action, check that no orphaned state remains.
 - **[rule]** Delegate the design with the goal: the spec, the decisions made, and the checks the
   result must pass. Before relying on what comes back, read its diff and rerun its key checks; a
@@ -355,9 +355,11 @@ an instance of this.
   a design that removes the class. A check covering part of what a rule names stands in for none of
   it.
 - **[lesson]** An order is a dependency, never the sequence you pictured: an imposed order names the
-  output the later step consumes; independent work runs together within the resource budget. A
-  failed test, approval or commit gate blocks its dependent artifact only: reassess what can still
-  be built before declaring a task blocked. Isolate review inputs by access.
+  output the later step consumes; independent work runs together within the resource budget. Do
+  independent pieces of one job (a step's members, several fixes or asks) in one pass: built and
+  tested in turn, verified in one run, recorded once. A failed test, approval or commit gate blocks
+  its dependent artifact only: reassess what can still be built before declaring a task blocked.
+  Isolate review inputs by access.
 
 ## Communication style
 
