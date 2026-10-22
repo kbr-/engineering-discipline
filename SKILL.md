@@ -196,8 +196,8 @@ an instance of this.
   gap, a rule you didn't reload). When a check let a defect through, find why it missed and fix the
   check. Answer a correction about how you work before anything else: the general principle broken,
   then the habit that broke it, shown by mistakes of other kinds, and only then this case; build
-  nothing until that answer is written. A correction of your analysis is answered about how you made
-  it, never by editing its content.
+  nothing until that answer is written. Answer a correction of your analysis or work about how you
+  made it, and leave its content as it stands: work done at the wrong time stays unless it is wrong.
 - **[rule]** Record an idea or a promising lead in its durable home as soon as it comes up.
 - **[rule]** Give results and other named things descriptive names, never letter codes.
 - **[rule]** After a compaction, reload the recorded knowledge (working doc, skills, rules, report)
