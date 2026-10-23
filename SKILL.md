@@ -258,6 +258,13 @@ hold is hard to say, change the design until it is easy.
 - **[rule]** Name Python files with underscores: a hyphenated file can't be imported.
 - **[rule]** Give every function you add or change full type hints, parameters and return, and keep
   the repository's type checker passing on what you touch, following its typing conventions.
+- **[rule]** Put logic in pure functions, whose result depends only on their arguments, and every
+  effect (a network call, a file read or write, a process run, a prompt, a clock or randomness read)
+  in a thin outer layer that gathers inputs, calls the pure core, applies its result and holds no
+  decision. Logging inside a function is allowed. Pass config as an explicit parameter (a config
+  struct); read it from the environment only where passing it is very costly. A pure core is what a
+  property test varies whole and replays, what a proof can reach, and what needs no fixtures; the
+  outer layer gets a few integration tests against the real system.
 - **[rule]** Never run a program inline in committed code (`python3 -c`, a heredoc fed to an
   interpreter): write a module and run it by its path, where the type checker, the tests and a
   search for callers see it.
