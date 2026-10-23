@@ -120,7 +120,8 @@ an instance of this.
   gains.
 - **[rule]** Surface non-obvious second-order consequences of a design choice (sync or async
   behaviour, join strategy, cross-system breakage) unasked, with how often and how much where you
-  have the numbers.
+  have the numbers. Cost each part of a design as you write it: where it runs, how often, what it
+  reads; a part on a per-call path reads a result kept current elsewhere.
 - **[rule]** Explain something complex bottom-up, defining each concept before it is used.
 - **[rule]** In design or cleanup discussion take one item at a time, and confirm everything
   outstanding is resolved and recorded before moving on. Execute an approved plan autonomously,
