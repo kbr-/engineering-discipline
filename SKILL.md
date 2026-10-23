@@ -240,7 +240,10 @@ an instance of this.
   interpreter): write a module and run it by its path, where the type checker, the tests and a
   search for callers see it.
 - **[rule]** Prefer the smallest surgical diff against the existing artifact to a new directory,
-  file or duplicated block, and the simplest mechanism, unless reuse doesn't fit.
+  file or duplicated block, and the simplest mechanism, unless reuse doesn't fit. Before choosing a
+  mechanism, name the cheapest one that meets the goal (fixing where the state is written, a counter
+  kept as events happen, a tool that exists) and say why it fails before taking a costlier one;
+  weigh each by what it costs whoever runs it, and how often.
 - **[rule]** Asked how to do something, give the literal, runnable command. Make pasteable text
   paste-ready: a command in a fenced block, one per line, never in an inline code span a wrap can
   break.
