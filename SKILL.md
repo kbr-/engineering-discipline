@@ -306,6 +306,11 @@ hold is hard to say, change the design until it is easy.
 
 ## Testing
 
+- **[rule]** A test is worth the wrong versions of its subject that it rejects. Take its expected
+  outcome from an account independent of the code (the requirement, the callers' uses, a simpler
+  model): the cases the code lists, its condition restated, or a call to the code under test confirm
+  nothing. State a relation that holds across the inputs and generate the inputs; a table of the
+  code's own cases with their answers, drawn at random, is a list of examples.
 - **[rule]** For manual testing of a hard-to-reach state, introduce an explicit, clearly marked,
   never-committed hack, and revert it yourself once the test is done.
 - **[rule]** Report the exact failure as the result. Never quietly change the target to force a pass
