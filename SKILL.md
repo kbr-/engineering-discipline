@@ -51,7 +51,8 @@ an instance of this.
 
 ## Verification: nothing is true until checked
 
-- **[rule]** State only what was verified. Attribute a failure to a cause ("transient", "flaky",
+- **[rule]** State only what was verified; a detail an example adds is a claim too, so name the
+  example bare unless its detail was checked. Attribute a failure to a cause ("transient", "flaky",
   "the same as before") only after checking it, and check an unverified cause before proposing it.
   Fix the root cause; a workaround (a margin, a retry, pagination that hides the bug) is no fix.
 - **[rule]** Let no overclaim or misattribution stand, your own earlier work included; say when
