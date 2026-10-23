@@ -520,21 +520,27 @@ an instance of this.
 - **[lesson]** In a theory reread, also read together every entry touching one object (a lock, a
   table, a contract surface), and put your own new proposals through the same checklist before
   bringing them; most missed gaps sit between entries, or in the pass's own output.
-- **[lesson]** An independent check differs from the code in exactly the assumption under test; a
-  reproduction reusing the code's URL or inputs can't tell the causes apart. Compare against a
-  known-good earlier call before blaming credentials.
 - **[lesson]** Key a verdict on an exit status, never on a printed word; use `set -o pipefail` when
   a pipeline's status matters.
-- **[lesson]** Key a check on the property it guards, never on a stand-in that usually agrees with
-  it (a file's time for "reviewed after the fix", a run's time for "tested on what is committed", a
-  unit's absence for "can't still end"). Name the property in one sentence, and write first the test
-  where the stand-in holds and the property fails. A commit's time or hash stands in for "this
-  change" only until a rebase or a commit during the review: record a digest of the code reviewed,
-  and reference an unpushed commit by what a rebase keeps (its subject, its patch ID). Take the
-  first rerun or refusal a stand-in costs as the sign. A reader reused from another tool for another
-  purpose is a stand-in too. The same holds for decisions: ask of a decision what it changes in what
-  runs now (a pin to "the version tested" can roll production back), and of a setting what it does
-  at run time.
+- **[lesson]** A check is evidence only to the degree that something wrong fails it, and is as weak
+  as the cheapest wrong thing it lets through: find that thing before relying on the check. Take its
+  verdict from an account independent of whatever produced what it judges, and trust only what such
+  an account could have contradicted. An independent check differs from the code in exactly the
+  assumption under test; a reproduction reusing the code's URL or inputs can't tell the causes
+  apart. Compare against a known-good earlier call before blaming credentials. A check stated as
+  instances invites work shaped to them, the checker's own work included. Without an answer key,
+  check by relations: independent views agree, an inverse returns the start, what must be conserved
+  is, a repeat changes nothing further, the whole composes from its parts, a cheaper verification or
+  a simpler model agrees; generate what is examined from its definition. Key a check on the property
+  it guards: a stand-in that usually agrees with it is no key (a file's time for "reviewed after the
+  fix", a run's time for "tested on what is committed", a unit's absence for "can't still end").
+  Name the property in one sentence, and write first the test where the stand-in holds and the
+  property fails. A commit's time or hash stands in for "this change" only until a rebase or a
+  commit during the review: record a digest of the code reviewed, and reference an unpushed commit
+  by what a rebase keeps (its subject, its patch ID). Take the first rerun or refusal a stand-in
+  costs as the sign. A reader reused from another tool for another purpose is a stand-in too. The
+  same holds for decisions: ask of a decision what it changes in what runs now (a pin to "the
+  version tested" can roll production back), and of a setting what it does at run time.
 - **[lesson]** Give each shell action that changes state (a deletion, a commit, a rebase, a reset, a
   write to a shared file) a command of its own, so the user approves and reads each; combine
   read-only checks freely. Name what it touches literally (a deletion's path, a rebase's upstream, a
