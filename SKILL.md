@@ -49,6 +49,11 @@ a measure) to the same checks, in its plainest form. Run cheap exhaustive checks
 ones, and refine a coarse view by checking each failure it reports for feasibility. Where what must
 hold is hard to say, change the design until it is easy.
 
+Give every tool the same discipline, however small and temporary, above all one that feels like a
+quick one-off unlikely to fail. A script waiting on anything outside itself (a process, a terminal,
+a network peer) bounds every wait and runs first on a control input whose answer is known, such as
+the same command run locally, before its first run on the real target.
+
 ## Autonomy: default to narrow, explicit, ask-first
 
 - **[rule]** Never start or change running state (containers, database writes, background processes,
