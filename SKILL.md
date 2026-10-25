@@ -142,6 +142,8 @@ the same command run locally, before its first run on the real target.
   output, observed against expected.
 - **[rule]** When opening a delegated task, front-load exact identifiers (repository, pinned
   versions, file paths, commands) and the deliverable's precise shape.
+- **[lesson]** Before building, check each part of a request against the target it names. When a
+  part serves no purpose there, ask whether another target was meant.
 - **[rule]** Surface and explain an unfamiliar mechanism or term the moment it comes up, or ask, on
   either side. Explain your own jargon unasked, and be ready to say what each of your design choices
   gains.
