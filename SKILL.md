@@ -451,7 +451,9 @@ the same command run locally, before its first run on the real target.
 - **[lesson]** List each decision function's unknown or malformed inputs.
 - **[lesson]** Ask what an anonymous or hostile caller controls (a method, a path, a header, a
   field), and bound every such value that becomes an identifier: a metric label, a key, a file or
-  table name.
+  table name. Ask also what a holder of each credential the design trusts (a device, a session, a
+  sign-in) can reach and change, the protection's own configuration included: a control is as strong
+  as the easiest way to edit it.
 - **[lesson]** Settle who sees each UI element before placing it.
 - **[lesson]** Map every mechanism a decision names to a step, or mark it out of scope. An
   implementation increment delivers one independently verifiable artifact with its acceptance
