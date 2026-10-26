@@ -564,6 +564,9 @@ the same command run locally, before its first run on the real target.
   bringing them; most missed gaps sit between entries, or in the pass's own output.
 - **[lesson]** Key a verdict on an exit status, never on a printed word; use `set -o pipefail` when
   a pipeline's status matters.
+- **[lesson]** Before computing a comparison (a cost against a price, before against after, one
+  option against another), state the one scenario both sides share (load, period, volume, setup) and
+  derive each side from that scenario alone.
 - **[lesson]** A check is evidence only to the degree that something wrong fails it, and is as weak
   as the cheapest wrong thing it lets through: find that thing before relying on the check. Take its
   verdict from an account independent of whatever produced what it judges, and trust only what such
