@@ -137,7 +137,9 @@ the same command run locally, before its first run on the real target.
   every entry against a fixed checklist and each decision against the rest of the design, and bring
   every gap found in one round. Repeat until a pass finds nothing new.
 - **[rule]** Decide minor details yourself and record them as your decisions; bring the user only
-  real choices, scope above all.
+  real choices, scope above all. A requirement someone else set (a ticket's acceptance criteria, a
+  stakeholder's ask) is never yours to decide: meet it as written, and bring a disagreement to the
+  user as a request.
 - **[rule]** Report a bug, and expect one reported, with a precise repro: the exact command and
   output, observed against expected.
 - **[rule]** When opening a delegated task, front-load exact identifiers (repository, pinned
