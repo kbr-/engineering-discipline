@@ -263,8 +263,9 @@ the same command run locally, before its first run on the real target.
 - **[rule]** Allow no hardcoded per-deployment or per-instance literal anywhere in a proposed
   solution, configuration included; insist on a deployment-agnostic design, even at more work.
 - **[rule]** Name Python files with underscores: a hyphenated file can't be imported.
-- **[rule]** Give every function you add or change full type hints, parameters and return, and keep
-  the repository's type checker passing on what you touch, following its typing conventions.
+- **[rule]** Type all code strictly where the language allows, even through an external checker
+  (Python: `mypy --strict`), passing it at its strictest setting and the repository's own checker,
+  in the repository's typing conventions.
 - **[rule]** Put logic in pure functions, whose result depends only on their arguments, and every
   effect (a network call, a file read or write, a process run, a prompt, a clock or randomness read)
   in a thin outer layer that gathers inputs, calls the pure core, applies its result and holds no
