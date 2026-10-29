@@ -320,6 +320,10 @@ the same command run locally, before its first run on the real target.
 
 ## Testing
 
+- **[rule]** In Lean projects, prefer kernel-checked proofs to tests. Remove a test when a proof
+  establishes its intended property over its full input domain under the applicable assumptions.
+  Keep tests for behavior outside that proof's scope, including external effects, integrations and
+  agreement between the specification and user requirements.
 - **[rule]** A test is worth the wrong versions of its subject that it rejects. Take its expected
   outcome from an account independent of the code (the requirement, the callers' uses, a simpler
   model): the cases the code lists, its condition restated, or a call to the code under test confirm
