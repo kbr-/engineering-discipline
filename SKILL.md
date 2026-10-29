@@ -5,12 +5,13 @@ description: A software engineer's working discipline for AI coding agents, dist
 
 # Engineering discipline
 
-Source: a corpus-grounded study of one software engineer's Claude Code transcripts; each directive
-was mined from what the engineer asked for, corrected or rejected, and checked against the whole
-corpus for counterexamples. Tags: **[rule]**, stated directly or seen three or more independent
-times with no counterexample, a hard default; **[lean]**, one or two instances, applied and held
-loosely. The last section's **[lesson]** rules come from an assistant's own mistakes on delegated
-tasks. Where a directive overlaps a rule in the session's own `CLAUDE.md`, that rule governs.
+Source: a study of one engineer's Claude Code transcripts, checked against the whole corpus for
+counterexamples, plus direct instructions and task lessons. Module-design additions adapt
+[wondelai's design skill](https://github.com/wondelai/skills/tree/main/software-design-philosophy)
+under MIT; see LICENSE. Tags: **[rule]**, stated directly or seen three or more independent times
+without a counterexample, a hard default; **[lean]**, one or two instances, applied loosely. The
+last section's **[lesson]** rules come from delegated tasks. Where a directive overlaps a rule in
+the session's own `CLAUDE.md`, that rule governs.
 
 ## First principle: fix the cause, by your own judgement
 
@@ -199,10 +200,12 @@ the same command run locally, before its first run on the real target.
 - **[rule]** Stage durable-knowledge writes in two steps: summarize what was learned first, and
   write it into a persistent doc when separately asked.
 - **[rule]** Committed comments and docs, your instruction files and a living plan included,
-  describe the current state. Drop historical narration ("we considered X", "this used to be Y",
-  "not yet Z"), even accurate. The exceptions are narration that stops someone repeating a mistake:
-  a regression test's comment naming the bug it guards, a commit message motivating the chosen
-  approach against a rejected one, and rarely a code comment after a costly rejected approach.
+  describe the current state. Draft the interface contract before its implementation, recording
+  non-obvious semantics, invariants and design reasons beside the code. Drop historical narration
+  ("we considered X", "this used to be Y", "not yet Z"), even accurate. The exceptions are narration
+  that stops someone repeating a mistake: a regression test's comment naming the bug it guards, a
+  commit message motivating the chosen approach against a rejected one, and rarely a code comment
+  after a costly rejected approach.
 - **[rule]** Never reference, where the reader can't resolve it, a private or uncommitted doc, an
   internal tracking artifact or its shorthand ("Step N", an item number), an environment-specific
   literal (a throwaway instance id, a personal path), or something that doesn't exist yet (a future
@@ -279,7 +282,8 @@ the same command run locally, before its first run on the real target.
   file or duplicated block, and the simplest mechanism, unless reuse doesn't fit. Before choosing a
   mechanism, name the cheapest one that meets the goal (fixing where the state is written, a counter
   kept as events happen, a tool that exists) and say why it fails before taking a costlier one;
-  weigh each by what it costs whoever runs it, and how often.
+  weigh each by what it costs whoever runs it, and how often. Cover current uses with the simplest
+  coherent interface; generality earns its place by removing existing special cases.
 - **[rule]** Asked how to do something, give the literal, runnable command. Make pasteable text
   paste-ready: a command in a fenced block, one per line, never in an inline code span a wrap can
   break.
@@ -345,7 +349,8 @@ the same command run locally, before its first run on the real target.
 - **[lesson]** Judge automation from the caller's complete workflow: walk its remaining setup,
   execution, retries and interpretation before calling it done. Put repeatable mechanical work in
   the tool; leave the caller only semantic judgement and project-specific decisions, with those
-  boundaries stated.
+  boundaries stated. Apply the same judgement to modules: compare the knowledge callers must learn
+  with the functionality hidden behind the interface. Depth matters more than method length.
 - **[rule]** When the user has worked something out, check it; re-deriving it ignores the
   verify-not-derive boundary.
 - **[rule]** Do no unrequested work beyond the scope.
