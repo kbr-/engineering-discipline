@@ -67,7 +67,8 @@ the same command run locally, before its first run on the real target.
   only on an explicit request or a prior separate instruction to proceed, mid-task too, however
   obvious the fix. An explicit "not yet" stands until the user lifts it; a rhetorical question is no
   go-ahead.
-- **[rule]** Branch before committing; commit to `master` or `main` only when the user directs it.
+- **[rule]** Create a branch for work intended for an MR. For our own project developed directly on
+  `main` or `master`, follow that workflow when the user directs it.
 - **[rule]** Lean toward running read-only and diagnostic commands yourself over relaying them to
   the user: the one place default autonomy is wider. When the user offers to set up your read access
   (a token, a connected tool, a logged-in browser), take it.
@@ -250,18 +251,14 @@ the same command run locally, before its first run on the real target.
   nothing else. Cut commits correctly as you write them (Writing commits, below). Lower-layer code
   with its tests, added for a later commit, gets a commit of its own, its message motivated by what
   will build on it; it never rides in a commit that doesn't use it.
-- **[rule]** Fold noisy WIP history into clean history before calling the work done.
-- **[rule]** Fold a test, fix or file that belongs with an earlier commit into it
-  (`git commit --fixup=<hash>`, then `git rebase --autosquash`), rewriting every later commit as
-  needed, so each commit reads as correct from the start: no self-correction narrated across
-  commits, no commit a later one supersedes. This is a hard default with no self-granted exceptions,
-  however many commits it touches or mechanical care it takes, added coverage included; skip it only
-  on the user's explicit authorization for that instance. Check the branch against its remote before
-  any destructive rewrite, and keep a backup branch (never a tag) until the work is done. The same
-  holds for any durable revised artifact (a rule file, a memory entry, a tracked doc). A final
-  message may still motivate the approach against a rejected one. Leave a document already sent to
-  its reader as sent. Leave pushed history with small damage alone; an exception to a standing rule
-  comes only from the user, explicitly.
+- **[rule]** Clean up history for an MR's review: fold WIP and corrections into the commits they
+  belong to with fixups and autosquash, so each commit can be reviewed on its own. This covers
+  tests, code and documents. For work that will not become an MR, append bug fixes as new commits;
+  retain earlier commits and reserve rewriting for a concrete justification such as removing
+  accidentally committed private data. Check the branch against its remote before a destructive
+  rewrite and keep a backup branch (never a tag) until the work is done, subject to required removal
+  of sensitive copies. Leave a document already sent to its reader as sent. Leave pushed history
+  with small damage alone.
 - **[rule]** Allow no hardcoded per-deployment or per-instance literal anywhere in a proposed
   solution, configuration included; insist on a deployment-agnostic design, even at more work.
 - **[rule]** Name Python files with underscores: a hyphenated file can't be imported.
@@ -504,11 +501,11 @@ the same command run locally, before its first run on the real target.
 - **[lesson]** State what a reader or check covers by the definition you checked it against and the
   forms it leaves out ("the list items CommonMark gives, without a table's rows"); "each form" or
   "every case" claims more.
-- **[lesson]** Aim a fixup at the commit whose change it belongs to, and check
-  `git diff --cached --stat` before each. When a later step changes code an earlier commit added,
-  commit that change as its `--fixup` at once, apart from the step's own files. To realign committed
-  changes, split each overfull commit where it stands and fold the pieces into their targets with
-  fixups.
+- **[lesson]** When preparing MR history, aim a fixup at the commit whose change it belongs to, and
+  check `git diff --cached --stat` before each. When a later step changes code an earlier commit
+  added, commit that change as its `--fixup` at once, apart from the step's own files. To realign
+  committed changes, split each overfull commit where it stands and fold the pieces into their
+  targets with fixups.
 - **[lesson]** A rebase todo script fails when it matches nothing; the todo is written
   `pick <hash> # <subject>`.
 - **[lesson]** When a decision changes, grep the branch's docs, runbooks, comments, commit messages
