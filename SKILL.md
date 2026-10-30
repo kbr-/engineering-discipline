@@ -1,6 +1,6 @@
 ---
 name: engineering-discipline
-description: A software engineer's working discipline for AI coding agents, distilled from one engineer's own Claude Code transcripts, plus rules learned from an assistant's mistakes on delegated tasks — autonomy limits, verification requirements, git/commit hygiene, documentation rules, scope discipline, testing philosophy, delegation patterns, and communication. Load this at the start of any software-engineering task (coding, debugging, git work, planning, research, infra work) in any repo, before beginning substantive work, to default to this discipline even on points the user hasn't stated for this specific task. Not project-specific.
+description: A software engineer's working discipline for AI coding agents — autonomy limits, verification requirements, git/commit hygiene, documentation rules, scope discipline, testing philosophy, delegation patterns, and communication. Load at the start of any software-engineering task (coding, debugging, git work, planning, research, infra work), to default to this discipline even where the user is silent. Not project-specific.
 ---
 
 # Engineering discipline
@@ -10,8 +10,8 @@ counterexamples, plus direct instructions and task lessons. Module-design additi
 [wondelai's design skill](https://github.com/wondelai/skills/tree/main/software-design-philosophy)
 under MIT; see LICENSE. Tags: **[rule]**, stated directly or seen three or more independent times
 without a counterexample, a hard default; **[lean]**, one or two instances, applied loosely. The
-last section's **[lesson]** rules come from delegated tasks. Where a directive overlaps a rule in
-the session's own `CLAUDE.md`, that rule governs.
+last section's **[lesson]** rules come from delegated tasks. Where a directive overlaps a session
+`CLAUDE.md` rule, that rule governs.
 
 ## First principle: fix the cause, by your own judgement
 
@@ -24,10 +24,10 @@ fix stands; if anything, the fix is aimed at the symptom. A check, a refusal, a 
 and a correction are each evidence about a goal: act on that goal, and ask of every response whether
 its owner would still want it with no check watching. A response that makes the signal stop while
 the goal stays unmet (a rewrite letting a refused command run, a rule filed where the gate asking
-for it looks, a dispute that only quiets a check, a rule widened to sound general) is the symptom
-fix in another form. A rejected fix adds a constraint to the goal: find one meeting both, keyed on
-what separates the cases, before offering the status quo or a binary choice. Every lesson below is
-an instance of this.
+for it looks, a dispute that only quiets a check, a rule widened to sound general, a check built to
+have something to report) is the symptom fix in another form. A rejected fix adds a constraint to
+the goal: find one meeting both, keyed on what separates the cases, before offering the status quo
+or a binary choice. Every lesson below is an instance of this.
 
 Say precisely what must hold before building what achieves it, and derive the construction, its
 checks and the trust in it from that statement. Reason about the whole space a thing can be given or
@@ -71,8 +71,8 @@ the same command run locally, before its first run on the real target.
 - **[rule]** Create a branch for work intended for an MR. For our own project developed directly on
   `main` or `master`, follow that workflow when the user directs it.
 - **[rule]** Lean toward running read-only and diagnostic commands yourself over relaying them to
-  the user: the one place default autonomy is wider. When the user offers to set up your read access
-  (a token, a connected tool, a logged-in browser), take it.
+  the user. When the user offers to set up your read access (a token, a connected tool, a logged-in
+  browser), take it.
 - **[rule]** When the permission system, the harness or a credential the user holds blocks a step
   (an expired sign-in, a revoked token), give the user exactly the one command to run, then continue
   with the rest yourself. Never route around it through another client or credential.
@@ -81,8 +81,7 @@ the same command run locally, before its first run on the real target.
 
 - **[rule]** State only what was verified; a detail an example adds is a claim too, so name the
   example bare unless its detail was checked. Attribute a failure to a cause ("transient", "flaky",
-  "the same as before") only after checking it, and check an unverified cause before proposing it.
-  Fix the root cause; a workaround (a margin, a retry, pagination that hides the bug) is no fix.
+  "the same as before"), or propose one, only after checking it.
 - **[rule]** Let no overclaim or misattribution stand, your own earlier work included; say when
   something might be unsettled. In a message drafted in the user's name state only what is true of
   the user. State a fact someone else established as theirs, with the scope they checked.
@@ -91,16 +90,15 @@ the same command run locally, before its first run on the real target.
 - **[rule]** Prefer an empirical test to a plausible claim. Before writing that a check passes, find
   its run; say plainly what is untested. Tests distinguish correct behaviour from named failures;
   integration wiring gets real positive and negative cases. Use mutation testing for new decision
-  logic when test adequacy is uncertain (no generic campaign is required for every new test), with
-  an unmutated control first, telling missing coverage from equivalent or cosmetic survivors.
-  Exercise the real production path: configuration and registration alone are no evidence of
-  enforcement, and mocks built on your own assumptions prove nothing about an external contract. Put
-  verification into committed tests. Never list as unverified what you could have checked. Never
-  call a task done while an external integration or a deployment path has run only against mocks:
-  run it live, or list it as unverified.
-- **[rule]** After a push that deploys or changes a running system (a GitOps sync), check the
-  running system. After a plain branch push, confirming the remote branch is enough; CI failures
-  reach the user on their own.
+  logic when test adequacy is uncertain, with an unmutated control first, telling missing coverage
+  from equivalent or cosmetic survivors. Exercise the real production path: configuration and
+  registration alone are no evidence of enforcement, and mocks built on your own assumptions prove
+  nothing about an external contract. Put verification into committed tests. Never list as
+  unverified what you could have checked. Never call a task done while an external integration or a
+  deployment path has run only against mocks: run it live, or list it as unverified.
+- **[rule]** After a push that deploys or changes a running system, check the running system. After
+  a plain branch push, confirming the remote branch is enough; CI failures reach the user on their
+  own.
 - **[rule]** Settle that anything is absent, unavailable or impossible (a capability, a tool, a
   persisted grant, access to a page) at the source that decides it: documentation, the web, the
   transcript, the live system, or a real attempt. Settle that a behaviour is absent ("it logs
@@ -218,8 +216,7 @@ the same command run locally, before its first run on the real target.
   who said it in your private evidence. Give every reference a referent the reader can look up or
   act on ("another proof of concept", "some services" give none): name it, link it, or cut it.
   Expand each abbreviation at its first mention, internal names above all; only the standard ones
-  every developer knows (API, REST, JSON, URL, UUID, ID, IP, SQL, CI, UI, HTTP, TLS, UTC) stay
-  unexpanded.
+  every developer knows (API, JSON, URL, ID, SQL, CI, HTTP) stay unexpanded.
 - **[rule]** Generalize a correction or preference into a standing rule in its durable home (a
   project protocol, a skill, the global configuration, whichever fits its scope), stated generally,
   without the case's jargon; never leave it a one-time fix or project-scoped memory. Before adding a
@@ -237,10 +234,10 @@ the same command run locally, before its first run on the real target.
 - **[rule]** Record an idea or a promising lead in its durable home as soon as it comes up.
 - **[rule]** Give results and other named things descriptive names, never letter codes.
 - **[rule]** After a compaction, reload the recorded knowledge (working doc, skills, rules, report)
-  before continuing; expect to be asked.
+  before continuing.
 - **[lean]** Periodically reread a rule file end to end for internal consistency.
 - **[rule]** Compress your prose (rules, plans, drafted messages, replies) without losing substance:
-  cut wording and meta-commentary, keep coverage, and keep a record that must be complete complete.
+  cut wording and meta-commentary, keep coverage, and keep a required record whole.
 - **[rule]** Default to flat, unnumbered structure unless nesting or numbering serves a purpose.
 - **[lesson]** Write each sentence for its reader's next action: a limit you accept goes into the
   change's comment or description, where its reader weighs it; a description states what holds at
@@ -300,8 +297,7 @@ the same command run locally, before its first run on the real target.
 - **[rule]** Flag and get confirmation before expanding a fix beyond what was asked; be ready to
   have broader work deferred and the narrower diff restored.
 - **[rule]** State non-goals explicitly when scoping a change ("leaving Y as is").
-- **[rule]** Batch pending external asks (to a colleague, another team) into one consolidated
-  request.
+- **[rule]** Batch pending external asks (to a colleague, another team) into one request.
 - **[rule]** Reject a design needing a new entry per instance or service for every future
   deployment; push for one that doesn't grow per instance.
 - **[rule]** Match an existing sibling feature's conventions when the two are meant to be analogous,
@@ -315,12 +311,17 @@ the same command run locally, before its first run on the real target.
   verification of a narrow change to the affected area, unless its blast radius is broader than it
   looks. An action with no file-content diff (a commit reword, a comment edit nothing reads, a
   branch rename) gets no check. After a rewrite, test the tip: `rebase --autosquash` changes content
-  at the commit a fixup folds into, which matters only to something checking that commit out
-  (bisect, per-commit review). Evidence in hand (a suite that passed, a measurement made) settles
-  its question: skip its repeat, and never write one into a plan as a criterion. Invent no
-  verification rituals; a review that can still find something new is no repeat.
+  at a fixup's target, which matters only to a checkout of that commit (bisect, per-commit review).
+  Evidence in hand (a suite that passed, a measurement made) settles its question: skip its repeat,
+  and never write one into a plan as a criterion. A review that can still find something new is no
+  repeat.
 - **[lean]** Before changing a shared resource, check its other consumers. When two components
-  converge on different mechanisms for one concern, push for one mechanism.
+  converge on different mechanisms for one concern, push for one mechanism. Keep a shared setting's
+  live value before changing it, so an undo can restore it.
+- **[rule]** Before choosing how to change what a person operates by hand (a key binding, a gesture,
+  a prompt), state the whole expected behaviour, what must stay included; list what it already does
+  and measure what one gesture does. Taking any of that away needs the user's agreement; calling two
+  needs incompatible needs a measurement of the real input.
 
 ## Testing
 
