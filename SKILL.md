@@ -216,7 +216,7 @@ the same command run locally, before its first run on the real target.
   who said it in your private evidence. Give every reference a referent the reader can look up or
   act on ("another proof of concept", "some services" give none): name it, link it, or cut it.
   Expand each abbreviation at its first mention, internal names above all; only the standard ones
-  every developer knows (API, JSON, URL, ID, SQL, CI, HTTP) stay unexpanded.
+  every developer knows (such as API, JSON, URL, ID, SQL, CI, HTTP) stay unexpanded.
 - **[rule]** Generalize a correction or preference into a standing rule in its durable home (a
   project protocol, a skill, the global configuration, whichever fits its scope), stated generally,
   without the case's jargon; never leave it a one-time fix or project-scoped memory. Before adding a
@@ -319,9 +319,11 @@ the same command run locally, before its first run on the real target.
   converge on different mechanisms for one concern, push for one mechanism. Keep a shared setting's
   live value before changing it, so an undo can restore it.
 - **[rule]** Before choosing how to change what a person operates by hand (a key binding, a gesture,
-  a prompt), state the whole expected behaviour, what must stay included; list what it already does
-  and measure what one gesture does. Taking any of that away needs the user's agreement; calling two
-  needs incompatible needs a measurement of the real input.
+  an interactive prompt), state the whole expected behaviour, what one gesture should do and what
+  must stay included, and compare the options by it. List what it already does; measure the change
+  in the test (how far, how often, what it costs): that it did something passes nothing. Taking any
+  existing behaviour away needs the user's agreement; calling two requirements incompatible takes a
+  measurement of the real input.
 
 ## Testing
 
