@@ -146,7 +146,8 @@ the same command run locally, before its first run on the real target.
 - **[rule]** When opening a delegated task, front-load exact identifiers (repository, pinned
   versions, file paths, commands) and the deliverable's precise shape.
 - **[lesson]** Before building, check each part of a request against the target it names. When a
-  part serves no purpose there, ask whether another target was meant.
+  part serves no purpose there, build nothing for it, and say in that reply what the target does
+  instead; urgency doesn't lift this.
 - **[rule]** Surface and explain an unfamiliar mechanism or term the moment it comes up, or ask, on
   either side. Explain your own jargon unasked, and be ready to say what each of your design choices
   gains.
@@ -328,6 +329,10 @@ the same command run locally, before its first run on the real target.
 
 ## Testing
 
+- **[rule]** Turn every bug found into a theorem over all inputs excluding its class, or in a
+  language without proofs a property test, stating beside it what the system must still assume; an
+  example or a passing run closes nothing. Close a gap you can close in the turn that finds it,
+  before reporting; a report lists only gaps with a reason they can't be closed.
 - **[rule]** In Lean projects, prefer kernel-checked proofs to tests. Remove a test when a proof
   establishes its intended property over its full input domain under the applicable assumptions.
   Keep tests for behavior outside that proof's scope, including external effects, integrations and
