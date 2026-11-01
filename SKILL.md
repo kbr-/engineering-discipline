@@ -263,6 +263,10 @@ the same command run locally, before its first run on the real target.
   with small damage alone.
 - **[rule]** Allow no hardcoded per-deployment or per-instance literal anywhere in a proposed
   solution, configuration included; insist on a deployment-agnostic design, even at more work.
+- **[rule]** Modularize from the first line: small modules, each owning one decision, each importing
+  only what it uses, never an umbrella, so they build in parallel and a program links only what it
+  needs. Run the language's unused-import analyser by default (Lean: `lake shake`, on `module`
+  files).
 - **[rule]** Name Python files with underscores: a hyphenated file can't be imported.
 - **[rule]** Type all code strictly where the language allows, even through an external checker
   (Python: `mypy --strict`), passing it at its strictest setting and the repository's own checker,
