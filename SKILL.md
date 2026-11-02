@@ -461,8 +461,8 @@ the same command run locally, before its first run on the real target.
 
 ### Design
 
-- **[lesson]** Name who decides each fixed choice of a search space or design as you write it:
-  evidence, the user, or the search itself; a familiar value decides nothing.
+- **[lesson]** Name who decides each fixed choice of a search space or design (a budget split too):
+  evidence, the user or the search; a familiar value decides nothing.
 - **[lesson]** Settle a requirement by the use it serves: ask what its reader does with it when it
   matters, and check that the moment produces it. Delivery, existence and rendering start that check
   (that logs reach the store, that a rule fires); they don't end it. Settle a mechanism the user
