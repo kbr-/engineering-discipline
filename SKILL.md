@@ -413,15 +413,15 @@ the same command run locally, before its first run on the real target.
   warning before the rejection, output that can't be skipped) whose firing leads to a useful
   response; leave judgement calls to judgement.
 - **[rule]** Report status against the goal and the open items.
-- **[rule]** Never waste the user's wall-clock time: work on what is unblocked, never idle on long
-  waits; while anything runs, read each finished result and start the next piece yourself, since a
-  status report or a task handed to another agent ends nothing; poll in short intervals that exit as
-  soon as the condition holds, keep timeouts short, and run independent checks in parallel. In a
-  long procedure, project the rest from the rate measured so far before each batch; when the
-  projection exceeds what the user would plausibly accept, stop and bring the numbers and options.
-  By the third round of a loop finding the same class of defect in one mechanism, bring the
-  per-round counts and, as your recommendation with its measured limits, a design that removes the
-  class. A check covering part of what a rule names stands in for none of it.
+- **[rule]** Never waste the user's wall-clock time: work on what is unblocked; while anything runs,
+  read each finished result and start the next piece yourself, since a status report or a task
+  handed to another agent ends nothing; poll in short intervals that exit as soon as the condition
+  holds, keep timeouts short, and run independent checks in parallel. In a long procedure, project
+  the rest from the rate measured so far before each batch; when the projection exceeds what the
+  user would plausibly accept, stop and bring the numbers and options. By the third round of a loop
+  finding the same class of defect in one mechanism, bring the per-round counts and, as your
+  recommendation with its measured limits, a design that removes the class. A check covering part of
+  what a rule names stands in for none of it.
 - **[lesson]** An order is a dependency, never the sequence you pictured: an imposed order names the
   output the later step consumes; independent work runs together within the resource budget. Do
   independent pieces of one job (a step's members, several fixes or asks) in one pass: built and
