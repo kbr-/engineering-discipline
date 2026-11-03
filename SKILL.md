@@ -685,6 +685,9 @@ the same command run locally, before its first run on the real target.
 
 - **[lesson]** Before changing dependencies or starting a server, check for running processes and
   listeners in the worktree.
+- **[lesson]** Search a binary or large file with the tool made for its form:
+  `strings -n 8 FILE | grep WORD` for a binary, `rg` for a tree. A context pattern (`grep -o` with
+  `.{0,60}` on each side) tries its whole window at every byte.
 - **[lesson]** When a branch reset removes migrations, reset the local database too; when adding a
   migration, grep for tests that pin the head.
 - **[lesson]** Trace each deployment-chart value to its template and to the name the code reads, and
