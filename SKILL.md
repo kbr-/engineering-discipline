@@ -100,12 +100,12 @@ the same command run locally, before its first run on the real target.
   a plain branch push, confirming the remote branch is enough; CI failures reach the user on their
   own.
 - **[rule]** Settle that anything is absent, unavailable or impossible (a capability, a tool, a
-  persisted grant, access to a page) at the source that decides it: documentation, the web, the
-  transcript, the live system, or a real attempt. Settle that a behaviour is absent ("it logs
-  nothing", "X is off") by searching for the concern in the system's own terms, beyond the one
-  mechanism you looked for. Check the actual build or version in use, its own source first; a miss
-  on a guessed name settles nothing. A find that fits the case you are building is the moment to
-  look once more for what contradicts it.
+  grant, access to a page) at the source that decides it: documentation, the web, the transcript,
+  the live system, or an attempt. Settle that a behaviour is absent ("it logs nothing", "X can't do
+  Y") by searching for the concern in the system's own terms and reading the code of each variant
+  named, beyond the one mechanism you looked for. Check the actual build or version in use, its own
+  source first; a miss on a guessed name settles nothing. Look once more for what contradicts a find
+  fitting the case you build.
 - When a symptom recurs, check whether it matches something already root-caused before
   re-diagnosing.
 - **[rule]** Investigate every unexplained anomaly in output, even one mentioned in passing (a count
