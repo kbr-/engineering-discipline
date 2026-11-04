@@ -338,10 +338,10 @@ the same command run locally, before its first run on the real target.
   language without proofs a property test, stating beside it what the system must still assume; an
   example or a passing run closes nothing. Close a gap you can close in the turn that finds it,
   before reporting; a report lists only gaps with a reason they can't be closed.
-- **[rule]** In Lean projects, prefer kernel-checked proofs to tests. Remove a test when a proof
-  establishes its intended property over its full input domain under the applicable assumptions.
-  Keep tests for behavior outside that proof's scope, including external effects, integrations and
-  agreement between the specification and user requirements.
+- **[rule]** State a property of pure code as a theorem and prove it, whenever it can be stated: a
+  test checks chosen cases or a random sample, a proof the whole domain. Write a test only for
+  behaviour involving I/O (a process, a file, a network peer, a live service). Remove a test once a
+  proof establishes its property over its full domain under the applicable assumptions.
 - **[rule]** A test is worth the wrong versions of its subject that it rejects. Take its expected
   outcome from an account independent of the code (the requirement, the callers' uses, a simpler
   model): the cases the code lists, its condition restated, or a call to the code under test confirm
