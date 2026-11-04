@@ -83,7 +83,9 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
 
 - **[rule]** State only what was verified; a detail an example adds is a claim too, so name the
   example bare unless its detail was checked. Attribute a failure to a cause ("transient", "flaky",
-  "the same as before"), or propose one, only after checking it.
+  "the same as before"), or propose one, only after checking it. What another process or session is
+  doing rests on its process listing and its files, read in the turn, and what a person can do or
+  reach on their own latest words.
 - **[rule]** Let no overclaim or misattribution stand, your own earlier work included; say when
   something might be unsettled. In a message drafted in the user's name state only what is true of
   the user. State a fact someone else established as theirs, with the scope they checked.
