@@ -141,7 +141,8 @@ the same command run locally, before its first run on the real target.
 - **[rule]** Decide minor details yourself and record them as your decisions; bring the user only
   real choices, scope above all. A requirement someone else set (a ticket's acceptance criteria, a
   stakeholder's ask) is never yours to decide: meet it as written, and bring a disagreement to the
-  user as a request.
+  user as a request. Before correcting the user, quote the words the correction answers, and correct
+  only what they say.
 - **[rule]** Report a bug, and expect one reported, with a precise repro: the exact command and
   output, observed against expected.
 - **[rule]** When opening a delegated task, front-load exact identifiers (repository, pinned
