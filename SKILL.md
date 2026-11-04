@@ -616,8 +616,10 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   property fails. A commit's time or hash stands in for "this change" only until a rebase or a
   commit during the review: record a digest of the code reviewed, and reference an unpushed commit
   by what a rebase keeps (its subject, its patch ID). Take the first rerun or refusal a stand-in
-  costs as the sign. A reader reused from another tool for another purpose is a stand-in too. The
-  same holds for decisions: ask of a decision what it changes in what runs now (a pin to "the
+  costs as the sign. A reader reused from another tool for another purpose is a stand-in too. So is
+  a wait's trigger: key a wait on the event it waits for (a session's last agent reporting back,
+  which its turn's end may precede), and arm the signal reporting that event before the turn ends.
+  The same holds for decisions: ask of a decision what it changes in what runs now (a pin to "the
   version tested" can roll production back), and of a setting what it does at run time.
 - **[lesson]** Give each shell action that changes state (a deletion, a commit, a rebase, a reset, a
   write to a shared file) a command of its own, so the user approves and reads each; combine
