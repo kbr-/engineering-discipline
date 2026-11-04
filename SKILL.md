@@ -53,7 +53,9 @@ hold is hard to say, change the design until it is easy.
 Give every tool the same discipline, however small and temporary, above all one that feels like a
 quick one-off unlikely to fail. A script waiting on anything outside itself (a process, a terminal,
 a network peer) bounds every wait and runs first on a control input whose answer is known, such as
-the same command run locally, before its first run on the real target.
+the same command run locally, before its first run on the real target. The bound must hold in the
+failure being diagnosed: a resource seen hanging (a mount, a socket, a lock) is read only from
+outside (process state, its server, its logs), since a kernel wait ignores a timeout's signal.
 
 ## Autonomy: default to narrow, explicit, ask-first
 
