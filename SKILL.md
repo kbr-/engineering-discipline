@@ -428,7 +428,9 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   pause between scripted keystrokes, a tool's startup delay) on the event it exists to observe,
   checked in short intervals: a guessed worst-case duration or a fixed count run to its end costs
   that time on every run. A window that must show an absence ("it never connects") takes its length
-  from the observed mechanism's own timing, such as its retry interval, stated beside it. In a long
+  from the observed mechanism's own timing, such as its retry interval, stated beside it. Design a
+  run only the user can do as one short run answering every open question: log every side at the
+  verbosity the analysis needs, and check before handing it over that its output decides each. In a long
   procedure, project the rest from the rate measured so far before each batch; when the projection
   exceeds what the user would plausibly accept, stop and bring the numbers and options. By the third
   round of a loop finding the same class of defect in one mechanism, bring the per-round counts and,
