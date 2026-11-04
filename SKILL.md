@@ -56,12 +56,6 @@ a network peer) bounds every wait and runs first on a control input whose answer
 the same command run locally, before its first run on the real target. The bound must hold in the
 failure being diagnosed: a resource seen hanging (a mount, a socket, a lock) is read only from
 outside (process state, its server, its logs), since a kernel wait ignores a timeout's signal.
-Every wait and repeat count in what you write or run (a poll, a sample loop, a test's duration, the
-pause between scripted keystrokes, a tool's startup delay) ends on the event it exists to observe:
-the reply arrived, the screen changed, the result is decided. A guessed worst-case duration or a
-fixed count run to its end costs the user that time on every run. A window that must show an
-absence ("it never connects") takes its length from the observed mechanism's own timing, such as
-its retry interval, stated beside it.
 
 ## Autonomy: default to narrow, explicit, ask-first
 
@@ -429,13 +423,17 @@ its retry interval, stated beside it.
 - **[rule]** Never waste the user's wall-clock time: work on what is unblocked; while anything runs,
   read each finished result and start the next piece yourself, since a status report or a task
   handed to another agent ends nothing, and a full machine limits its jobs and none of your own
-  code, reading or analysis; poll in short intervals that exit as soon as the condition holds, keep
-  timeouts short, and run independent checks in parallel. In a long procedure, project the rest from
-  the rate measured so far before each batch; when the projection exceeds what the user would
-  plausibly accept, stop and bring the numbers and options. By the third round of a loop finding the
-  same class of defect in one mechanism, bring the per-round counts and, as your recommendation with
-  its measured limits, a design that removes the class. A check covering part of what a rule names
-  stands in for none of it.
+  code, reading or analysis; keep timeouts short, and run independent checks in parallel. End every
+  wait and repeat count in what you write or run (a poll, a sample loop, a test's duration, the
+  pause between scripted keystrokes, a tool's startup delay) on the event it exists to observe,
+  checked in short intervals: a guessed worst-case duration or a fixed count run to its end costs
+  that time on every run. A window that must show an absence ("it never connects") takes its length
+  from the observed mechanism's own timing, such as its retry interval, stated beside it. In a long
+  procedure, project the rest from the rate measured so far before each batch; when the projection
+  exceeds what the user would plausibly accept, stop and bring the numbers and options. By the third
+  round of a loop finding the same class of defect in one mechanism, bring the per-round counts and,
+  as your recommendation with its measured limits, a design that removes the class. A check covering
+  part of what a rule names stands in for none of it.
 - **[lesson]** An order is a dependency, never the sequence you pictured: an imposed order names the
   output the later step consumes; independent work runs together within the resource budget. Do
   independent pieces of one job (a step's members, several fixes or asks) in one pass: built and
