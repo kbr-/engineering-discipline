@@ -589,6 +589,10 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   fix to a reader, write down every part of its input that can change its verdict (where a tag
   stands, the words before it, what nests under it, which record or round is meant) and test each,
   however small the request.
+- **[lesson]** When several sites fail one check the same way, or one change must be made at several
+  of them, put the change into the code they share (a function, a launcher, a fixture) and have each
+  site call it, creating that place first where none exists: a fix copied to each site leaves the
+  next change to be copied again.
 - **[lesson]** Design tests from what the checking rules require, independent of the tests the
   repository already has. A missing test of the code, or no CI service for the system it talks to,
   is a gap the task closes (add the service beside the ones CI runs); never test around that system
