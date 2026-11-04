@@ -56,6 +56,12 @@ a network peer) bounds every wait and runs first on a control input whose answer
 the same command run locally, before its first run on the real target. The bound must hold in the
 failure being diagnosed: a resource seen hanging (a mount, a socket, a lock) is read only from
 outside (process state, its server, its logs), since a kernel wait ignores a timeout's signal.
+Every wait and repeat count in what you write or run (a poll, a sample loop, a test's duration, the
+pause between scripted keystrokes, a tool's startup delay) ends on the event it exists to observe:
+the reply arrived, the screen changed, the result is decided. A guessed worst-case duration or a
+fixed count run to its end costs the user that time on every run. A window that must show an
+absence ("it never connects") takes its length from the observed mechanism's own timing, such as
+its retry interval, stated beside it.
 
 ## Autonomy: default to narrow, explicit, ask-first
 
