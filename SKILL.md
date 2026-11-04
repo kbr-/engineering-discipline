@@ -339,8 +339,9 @@ the same command run locally, before its first run on the real target.
   example or a passing run closes nothing. Close a gap you can close in the turn that finds it,
   before reporting; a report lists only gaps with a reason they can't be closed.
 - **[rule]** State a property of pure code as a theorem and prove it, whenever it can be stated: a
-  test checks chosen cases or a random sample, a proof the whole domain. Write a test only for
-  behaviour involving I/O (a process, a file, a network peer, a live service). Remove a test once a
+  test checks chosen cases or a random sample, a proof the whole domain. Write a test only where no
+  proof can be written: behaviour involving I/O (a process, a file, a network peer, a live service),
+  or code in a language with no proof assistant, which gets property tests. Remove a test once a
   proof establishes its property over its full domain under the applicable assumptions.
 - **[rule]** A test is worth the wrong versions of its subject that it rejects. Take its expected
   outcome from an account independent of the code (the requirement, the callers' uses, a simpler
