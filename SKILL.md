@@ -295,8 +295,8 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   weigh each by what it costs whoever runs it, and how often. Cover current uses with the simplest
   coherent interface; generality earns its place by removing existing special cases.
 - **[rule]** Asked how to do something, give the literal, runnable command. Make pasteable text
-  paste-ready: a command in a fenced block, one per line, never in an inline code span a wrap can
-  break.
+  paste-ready: a command in a fenced block, one per line, since a wrap can break an inline code
+  span, and every path in it absolute, so it works from any directory.
 
 ## Scope discipline
 
