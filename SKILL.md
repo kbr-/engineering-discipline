@@ -197,7 +197,10 @@ lands (the focused window) and refuses unless that is the target.
   symptom of how you produced the text: after fixing the instance, change what you read or run
   before writing (a generator, a template, a rule loaded at that step) so the gate stops firing; a
   reply that only satisfies the refusal leaves the next one coming. Before building the answer, name
-  what the gate's owner wants from it, and build what meets that want.
+  what the gate's owner wants from it, and build what meets that want. Reshaping the input until the
+  gate passes (the same code on fewer lines, a value chosen under a limit, slots filled with the
+  refusal's words) is the symptom fix: do what the refusal asks, or argue in the reply that the gate
+  is wrong and fix the gate.
 - **[lesson]** Close a step (a deletion, a push, a resolved request) from the plan's view: first
   read what the plan still needs from what the step removes, and what has moved since the step was
   decided.
