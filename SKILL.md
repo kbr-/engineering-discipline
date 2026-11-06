@@ -55,7 +55,9 @@ quick one-off unlikely to fail. A script waiting on anything outside itself (a p
 a network peer) bounds every wait and runs first on a control input whose answer is known, such as
 the same command run locally, before its first run on the real target. The bound must hold in the
 failure being diagnosed: a resource seen hanging (a mount, a socket, a lock) is read only from
-outside (process state, its server, its logs), since a kernel wait ignores a timeout's signal.
+outside (process state, logs), since a kernel wait ignores a timeout's signal. A script sending
+input into a device someone uses reads, in the same command, what decides where it lands (the
+focused window) and refuses unless that is the target.
 
 ## Autonomy: default to narrow, explicit, ask-first
 
