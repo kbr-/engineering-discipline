@@ -105,12 +105,13 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   own.
 - **[rule]** Settle that anything is absent, unavailable or impossible (a capability, a tool, a
   persisted grant, access to a page) at the source that decides it: documentation, the web, the
-  transcript, the live system, or a real attempt. Settle that a behaviour is absent ("it logs
-  nothing", "X is off", "X can't do Y") by searching for the concern in the system's own terms,
-  beyond the one mechanism you looked for, and by reading the code of each variant the claim names.
-  Check the actual build or version in use, its own source first; a miss on a guessed name settles
-  nothing. A find that fits the case you are building is the moment to look once more for what
-  contradicts it.
+  transcript, the live system, or a real attempt. Establish capabilities, data movement and
+  permission needs from the configured execution path and observed result; descriptive names and
+  provider labels establish none of them. Settle that a behaviour is absent ("it logs nothing", "X
+  is off", "X can't do Y") by searching for the concern in the system's own terms, beyond the one
+  mechanism you looked for, and by reading the code of each variant the claim names. Check the
+  actual build or version in use, its own source first; a miss on a guessed name settles nothing. A
+  find that fits the case you are building is the moment to look once more for what contradicts it.
 - When a symptom recurs, check whether it matches something already root-caused before
   re-diagnosing.
 - **[rule]** Investigate every unexplained anomaly in output, even one mentioned in passing (a count
@@ -430,12 +431,12 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   that time on every run. A window that must show an absence ("it never connects") takes its length
   from the observed mechanism's own timing, such as its retry interval, stated beside it. Design a
   run only the user can do as one short run answering every open question: log every side at the
-  verbosity the analysis needs, and check before handing it over that its output decides each. In a long
-  procedure, project the rest from the rate measured so far before each batch; when the projection
-  exceeds what the user would plausibly accept, stop and bring the numbers and options. By the third
-  round of a loop finding the same class of defect in one mechanism, bring the per-round counts and,
-  as your recommendation with its measured limits, a design that removes the class. A check covering
-  part of what a rule names stands in for none of it.
+  verbosity the analysis needs, and check before handing it over that its output decides each. In a
+  long procedure, project the rest from the rate measured so far before each batch; when the
+  projection exceeds what the user would plausibly accept, stop and bring the numbers and options.
+  By the third round of a loop finding the same class of defect in one mechanism, bring the
+  per-round counts and, as your recommendation with its measured limits, a design that removes the
+  class. A check covering part of what a rule names stands in for none of it.
 - **[lesson]** An order is a dependency, never the sequence you pictured: an imposed order names the
   output the later step consumes; independent work runs together within the resource budget. Do
   independent pieces of one job (a step's members, several fixes or asks) in one pass: built and
