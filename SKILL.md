@@ -339,8 +339,10 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   departure from the default names the situation that needs it. State the whole expected behaviour,
   what one action should do and what must stay included, and compare the options by it. List what it
   already does; measure the change in the test (how far, how often, what it costs): that it did
-  something passes nothing. Taking any existing behaviour away needs the user's agreement; calling
-  two requirements incompatible takes a measurement of the real input.
+  something passes nothing. Look at the result on the device first as that person would, beside what
+  any other app does there, and only then by your own acceptance criteria. Taking any existing
+  behaviour away needs the user's agreement; calling two requirements incompatible takes a
+  measurement of the real input.
 
 ## Testing
 
