@@ -115,6 +115,8 @@ lands (the focused window) and refuses unless that is the target.
   mechanism you looked for, and by reading the code of each variant the claim names. Check the
   actual build or version in use, its own source first; a miss on a guessed name settles nothing. A
   find that fits the case you are building is the moment to look once more for what contradicts it.
+  Read a source opened for one claim for everything it says about the objects at hand, and check
+  each statement against what you rely on.
 - When a symptom recurs, check whether it matches something already root-caused before
   re-diagnosing.
 - **[rule]** Investigate every unexplained anomaly in output, even one mentioned in passing (a count
