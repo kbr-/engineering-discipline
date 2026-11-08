@@ -350,6 +350,11 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   language without proofs a property test, stating beside it what the system must still assume; an
   example or a passing run closes nothing. Close a gap you can close in the turn that finds it,
   before reporting; a report lists only gaps with a reason they can't be closed.
+- **[rule]** Before a change to code several behaviours pass through lands, prove a regression
+  theorem: on every input outside the behaviour changed, the output equals the old one, and name the
+  inputs the change does alter. Proved once, it holds for every later build; a rerun of the other
+  behaviours after each change checks only the cases run and costs that time every change. Where the
+  code can't be proved, put its decision in a pure function that can.
 - **[rule]** State a property of pure code as a theorem and prove it, whenever it can be stated: a
   test checks chosen cases or a random sample, a proof the whole domain. Write a test only where no
   proof can be written: behaviour involving I/O (a process, a file, a network peer, a live service),
