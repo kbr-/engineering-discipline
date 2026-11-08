@@ -331,12 +331,16 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
 - **[lean]** Before changing a shared resource, check its other consumers. When two components
   converge on different mechanisms for one concern, push for one mechanism. Keep a shared setting's
   live value before changing it, so an undo can restore it.
-- **[rule]** Before choosing how to change what a person operates by hand (a key binding, a gesture,
-  an interactive prompt), state the whole expected behaviour, what one gesture should do and what
-  must stay included, and compare the options by it. List what it already does; measure the change
-  in the test (how far, how often, what it costs): that it did something passes nothing. Taking any
-  existing behaviour away needs the user's agreement; calling two requirements incompatible takes a
-  measurement of the real input.
+- **[rule]** Before choosing how to change what a person experiences, through any interface (a key
+  binding, a gesture, a prompt, the screen's power, a voice or gaze command), list the person's
+  situations in their own terms (what they are doing, holding, looking at, expecting next) and, for
+  each, what the system's default does there and what the person should see. Design from those
+  situations: each condition on a state the code reads names the situation it serves, and a
+  departure from the default names the situation that needs it. State the whole expected behaviour,
+  what one action should do and what must stay included, and compare the options by it. List what it
+  already does; measure the change in the test (how far, how often, what it costs): that it did
+  something passes nothing. Taking any existing behaviour away needs the user's agreement; calling
+  two requirements incompatible takes a measurement of the real input.
 
 ## Testing
 
