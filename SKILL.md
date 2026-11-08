@@ -483,6 +483,10 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
 
 - **[lesson]** Name who decides each fixed choice of a search space or design (a budget split too):
   evidence, the user or the search; a familiar value decides nothing.
+- **[lesson]** Give a rule (a detector, a filter, a validation) a condition only to reject a case
+  that must be rejected, shown on a recorded or stated instance of that case. A condition that held
+  while the rule was calibrated (the device lay still, the run was at night) is no reason by itself:
+  many things held then, and each one kept turns away the real use that differs from the test.
 - **[lesson]** Settle a requirement by the use it serves: ask what its reader does with it when it
   matters, and check that the moment produces it. Delivery, existence and rendering start that check
   (that logs reach the store, that a rule fires); they don't end it. Settle a mechanism the user
