@@ -451,9 +451,10 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
 - **[lesson]** An order is a dependency, never the sequence you pictured: an imposed order names the
   output the later step consumes; independent work runs together within the resource budget. Do
   independent pieces of one job (a step's members, several fixes or asks) in one pass: built and
-  tested in turn, verified in one run, recorded once. A failed test, approval or commit gate blocks
-  its dependent artifact only: reassess what can still be built before declaring a task blocked.
-  Isolate review inputs by access.
+  tested in turn, verified in one run, recorded once. Treat a ledger review as one job. Draft the
+  complete ledger before submitting it and address independent findings together. A failed test,
+  approval or commit gate blocks its dependent artifact only: reassess what can still be built
+  before declaring a task blocked. Isolate review inputs by access.
 
 ## Communication style
 
