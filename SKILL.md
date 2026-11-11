@@ -86,7 +86,9 @@ lands (the focused window) and refuses unless that is the target.
 
 - **[rule]** State only what was verified; a detail an example adds is a claim too, so name the
   example bare unless its detail was checked. Attribute a failure to a cause ("transient", "flaky",
-  "the same as before"), or propose one, only after checking it. What another process or session is
+  "the same as before"), or propose one, only after checking it. A conclusion reached through
+  several links (a path to a failure, a cause) rests on a check of each, the state a path starts
+  from read at its writer; name a link left unchecked as such. What another process or session is
   doing rests on its process listing and its files, read in the turn, and what a person can do or
   reach on their own latest words.
 - **[rule]** Let no overclaim or misattribution stand, your own earlier work included; say when
