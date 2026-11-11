@@ -75,9 +75,10 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
 - **[rule]** Lean toward running read-only and diagnostic commands yourself over relaying them to
   the user. When the user offers to set up your read access (a token, a connected tool, a logged-in
   browser), take it.
-- **[rule]** When the permission system, the harness or a credential the user holds blocks a step
-  (an expired sign-in, a revoked token), give the user exactly the one command to run, then continue
-  with the rest yourself. Never route around it through another client or credential.
+- **[rule]** Repair agent-owned setup and framework faults within existing task authorization. When
+  a step needs a permission or credential only the user can supply, give the user exactly the one
+  command to run, then continue with the rest yourself. Never route around that boundary through
+  another client or credential.
 
 ## Verification: nothing is true until checked
 
