@@ -429,8 +429,8 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   judgement while work remains: find a new angle and continue. Stopping is the user's call or the
   stated condition's. Filing a hard step as the user's choice, or as impossible, is giving up: name
   the mechanisms tried, settle the impossibility at its source, and keep building another. A step so
-  filed is rechecked item by item against the means at hand (a stand-in found, a tool built)
-  whenever they change, and whenever a check refuses the wait.
+  filed is rechecked item by item against the means at hand (a stand-in found, a tool built) and the
+  evidence already held, whenever they change, and whenever a check refuses the wait.
 - **[rule]** When an agent keeps breaking a written rule, enforce it with a minimal check (a hook, a
   warning before the rejection, output that can't be skipped) whose firing leads to a useful
   response; leave judgement calls to judgement.
