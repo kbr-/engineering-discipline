@@ -704,8 +704,8 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   a batch size, a wait) where the record holds its measurement, and recompute a derived one (a rate,
   a share) from its inputs' sources, its denominator above all, once a decision rests on it. An
   action the user reports having done (a branch deleted, a ticket moved) is the record: take their
-  word. An explanation of a mechanism enters a commit or a rule once an observation that could have
-  contradicted it has been made.
+  word. An explanation of a mechanism (why a tool refused, what a system does next) enters a reply,
+  a commit or a rule once an observation that could have contradicted it has been made.
 - **[lesson]** Take an endpoint's path from the code's route table before reading its status code as
   evidence.
 - **[lesson]** A search finding a name only where it is used is no evidence that nothing defines it:
