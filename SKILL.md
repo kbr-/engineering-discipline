@@ -85,12 +85,13 @@ lands (the focused window) and refuses unless that is the target.
 ## Verification: nothing is true until checked
 
 - **[rule]** State only what was verified; a detail an example adds is a claim too, so name the
-  example bare unless its detail was checked. Attribute a failure to a cause ("transient", "flaky",
-  "the same as before"), or propose one, only after checking it. A conclusion reached through
-  several links (a path to a failure, a cause) rests on a check of each, the state a path starts
-  from read at its writer; name a link left unchecked as such. What another process or session is
-  doing rests on its process listing and its files, read in the turn, and what a person can do or
-  reach on their own latest words.
+  example bare unless its detail was checked. A sentence worded from evidence keeps each qualifier
+  it carries ("likely", "not forced", "in the runs here"). Attribute a failure to a cause
+  ("transient", "flaky", "the same as before"), or propose one, only after checking it. A conclusion
+  reached through several links (a path to a failure, a cause) rests on a check of each, the state a
+  path starts from read at its writer; name a link left unchecked as such. What another process or
+  session is doing rests on its process listing and its files, read in the turn, and what a person
+  can do or reach on their own latest words.
 - **[rule]** Let no overclaim or misattribution stand, your own earlier work included; say when
   something might be unsettled. In a message drafted in the user's name state only what is true of
   the user. State a fact someone else established as theirs, with the scope they checked.
@@ -691,9 +692,10 @@ lands (the focused window) and refuses unless that is the target.
   trace prints at each suspect place, run until it fails, read the trace for the failing order, and
   force that order (a barrier, an event, a condition variable) so it fails every time. It reproduces
   once its output, read, shows the original's events: the same outcome reached another way (the
-  forcing's timeout) shows nothing, as for a control or killed mutant. Fix the cause the forced run
-  shows, and keep the forcing in the test guarding it. Before rerunning a run that hung, read where
-  it stands: its threads' stacks, its log.
+  forcing's timeout) shows nothing, as for a control or killed mutant. A case varying timing or
+  order is named by the change its output shows in the judged system's own clock or order. Fix the
+  cause the forced run shows, and keep the forcing in the test guarding it. Before rerunning a run
+  that hung, read where it stands: its threads' stacks, its log.
 - **[lesson]** Hold a prevention you add for your own mistake (a rule, a check, a hook, a tool) to
   the standard of a fix: it finds or forces the cause of the class. One catching the class by chance
   (a repeated run, a wider margin, a retry) is a workaround in the rules; use one only where nothing
