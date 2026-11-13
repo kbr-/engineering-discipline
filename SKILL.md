@@ -89,9 +89,11 @@ lands (the focused window) and refuses unless that is the target.
   it carries ("likely", "not forced", "in the runs here"). Attribute a failure to a cause
   ("transient", "flaky", "the same as before"), or propose one, only after checking it. A conclusion
   reached through several links (a path to a failure, a cause) rests on a check of each, the state a
-  path starts from read at its writer; name a link left unchecked as such. What another process or
-  session is doing rests on its process listing and its files, read in the turn, and what a person
-  can do or reach on their own latest words.
+  path starts from read at its writer; name a link left unchecked as such. A run shows the setup it
+  ran in: a claim that it shows another (CI, production, the code as committed) lists each
+  difference (interpreter, the writer's paths, installed packages, flags) or narrows. What another
+  process or session is doing rests on its process listing and its files, read in the turn, and what
+  a person can do or reach on their own latest words.
 - **[rule]** Let no overclaim or misattribution stand, your own earlier work included; say when
   something might be unsettled. In a message drafted in the user's name state only what is true of
   the user. State a fact someone else established as theirs, with the scope they checked.
