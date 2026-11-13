@@ -93,7 +93,8 @@ lands (the focused window) and refuses unless that is the target.
   ran in: a claim that it shows another (CI, production, the code as committed) lists each
   difference (interpreter, the writer's paths, installed packages, flags) or narrows. What another
   process or session is doing rests on its process listing and its files, read in the turn, and what
-  a person can do or reach on their own latest words.
+  a person can do or reach on their own latest words: a step they report failing leaves the next
+  answer.
 - **[rule]** Let no overclaim or misattribution stand, your own earlier work included; say when
   something might be unsettled. In a message drafted in the user's name state only what is true of
   the user. State a fact someone else established as theirs, with the scope they checked.
@@ -297,8 +298,9 @@ lands (the focused window) and refuses unless that is the target.
   keys, a protocol for a duck-typed collaborator, a type variable for a value passed through, a
   recursive alias for open JSON, `object` where nothing about it is used. An escape that quiets the
   checker (`Any`, a bare container, `cast`, a conversion erasing `None`) stays only where a
-  library's own types force it, with a comment naming that signature; turn on the checker's refusal
-  of it (mypy: `disallow_any_explicit`) once the code is clear of it.
+  library's own types force it, the alternatives (a precise union, a tuple, a validated model,
+  another call of the library) tried and failed, its comment naming them; turn on the checker's
+  refusal of it (mypy: `disallow_any_explicit`) once the code is clear of it.
 - **[rule]** Put logic in pure functions, whose result depends only on their arguments, and every
   effect (a network call, a file read or write, a process run, a prompt, a clock or randomness read)
   in a thin outer layer that gathers inputs, calls the pure core, applies its result and holds no
