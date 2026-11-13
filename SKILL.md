@@ -93,8 +93,8 @@ lands (the focused window) and refuses unless that is the target.
   ran in: a claim that it shows another (CI, production, the code as committed) lists each
   difference (interpreter, the writer's paths, installed packages, flags) or narrows. What another
   process or session is doing rests on its process listing and its files, read in the turn, and what
-  a person can do or reach on their own latest words: a step they report failing leaves the next
-  answer.
+  a person can do or reach on their own latest words: never offer them again a step they report
+  failing.
 - **[rule]** Let no overclaim or misattribution stand, your own earlier work included; say when
   something might be unsettled. In a message drafted in the user's name state only what is true of
   the user. State a fact someone else established as theirs, with the scope they checked.
