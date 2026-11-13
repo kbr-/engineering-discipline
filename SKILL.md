@@ -186,6 +186,8 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   source unless it names it: an order counts only where the tool documents it, so label lines read
   from several runs, and treat a part a line omits (a wrapper, a field) as unknown. Run it at the
   depth set before its first result (a replay count, a sample), however early a difference shows.
+  Write first the result the step's invariant requires (a rebase only moving changes: an empty tree
+  diff) and read the output against it, never against the change you expect to see.
 - **[lesson]** When a gate of your own refuses, first ask whether the property it guards changed; a
   refusal where the property holds is the gate's defect, fixed then. A refusal where it fails is a
   symptom of how you produced the text: after fixing the instance, change what you read or run
