@@ -623,14 +623,15 @@ lands (the focused window) and refuses unless that is the target.
   changed function from its top with one input it must refuse and one it must pass. Ask of each
   value a reader takes what else it could be in that place (a path where a branch is read, another
   repository, a program the reader doesn't know), and make a guard refuse what it can't classify.
-  Where the input is a language (the shell, a record's tags), list its forms from the language's
-  definition, every way it can ask for the guarded effect included (a backtick beside `$(...)`, an
-  option that stashes beside the stash command): open that definition in the step writing the fix
-  and name it in the test. Apply such a lesson in the same change to every guard and gate the change
-  adds, and check a sentence about how code runs (which copy a loader reads) by running it. Before a
-  fix to a reader, write down every part of its input that can change its verdict (where a tag
-  stands, the words before it, what nests under it, which record or round is meant) and test each,
-  however small the request.
+  Where the input is a language (the shell, a record's tags), compare each whole unit (a command, a
+  key) against those allowed and refuse any other, parsing no subset of its forms, and list its
+  forms from the language's definition, every way it can ask for the guarded effect included (a
+  backtick beside `$(...)`, an option that stashes beside the stash command): open that definition
+  in the step writing the fix and name it in the test. Apply such a lesson in the same change to
+  every guard and gate the change adds, and check a sentence about how code runs (which copy a
+  loader reads) by running it. Before a fix to a reader, write down every part of its input that can
+  change its verdict (where a tag stands, the words before it, what nests under it, which record or
+  round is meant) and test each, however small the request.
 - **[lesson]** When several sites fail one check the same way, or one change must be made at several
   of them, put the change into the code they share (a function, a launcher, a fixture) and have each
   site call it, creating that place first where none exists: a fix copied to each site leaves the
