@@ -789,7 +789,8 @@ lands (the focused window) and refuses unless that is the target.
   commit messages and the code comments, found by searching for its words. Before editing a fact a
   decision of yours changes, list every place the task states it (each branch, description, ledger,
   request and the plan), searching by the fact's value (a version, a count, a name).
-- **[lesson]** List leftover branches and worktrees for deletion.
+- **[lesson]** Delete the branches, worktrees and scratch you made once nothing needs them, local
+  and remote; list for the user only what someone else made.
 - **[lesson]** Hand over a precondition someone else must honour (a merge order, a sync before a
   step, a check before a deploy) with what makes the wrong way impossible or loud: a Draft until the
   step before lands, a merge-request dependency, a check that fails.
