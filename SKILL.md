@@ -296,13 +296,13 @@ lands (the focused window) and refuses unless that is the target.
   (Python: `mypy --strict`), passing it at its strictest setting and the repository's own checker,
   in the repository's typing conventions. Give each value the type it has: a record type for known
   keys, a protocol for a duck-typed collaborator, a type variable for a value passed through, a
-  recursive alias for open JSON, `object` only where every value is correct (what `str()` takes, a
-  callback's ignored result), `Any` where a correct type exists that the type system can't express
-  (a value passed on to a signature the code can't name), each read from the code receiving the
-  value. An escape that quiets the checker (`Any` where a type can be written, a bare container,
-  `cast`, a conversion erasing `None`) stays only where a library's own types force it, the
-  alternatives (a precise union, a tuple, a validated model, another call of the library) tried and
-  failed, its comment naming them.
+  recursive alias for open JSON, `object` only where every value is correct (what `str()` takes),
+  `Any` only for a type the type system can't express (a value passed to a signature the code can't
+  name), its comment giving the reason unless the form is `Callable[..., Any]` or a mapping whose
+  value types depend on the keys, each read from the code receiving the value. An escape that quiets
+  the checker (`Any` where a type can be written, a bare container, `cast`, a conversion erasing
+  `None`) stays only where a library's own types force it, the alternatives (a precise union, a
+  tuple, a validated model, another call of the library) tried and failed, its comment naming them.
 - **[rule]** Put logic in pure functions, whose result depends only on their arguments, and every
   effect (a network call, a file read or write, a process run, a prompt, a clock or randomness read)
   in a thin outer layer that gathers inputs, calls the pure core, applies its result and holds no
