@@ -623,7 +623,8 @@ outside (process state, its server, its logs), since a kernel wait ignores a tim
   through every caller's real entry point: make what it must prevent observable everywhere at once
   (every file it must not run replaced by one that reports itself), and run what the checks around
   it watch (a real write through every guard). Its own side effects (a helper process, a held file)
-  show first in its neighbours.
+  show first in its neighbours. Do it before the commit, in a copy linked as callers link it: once
+  committed, it runs for every caller.
 - **[lesson]** In a theory reread, also read together every entry touching one object (a lock, a
   table, a contract surface), and put your own new proposals through the same checklist before
   bringing them; most missed gaps sit between entries, or in the pass's own output.
