@@ -588,7 +588,10 @@ lands (the focused window) and refuses unless that is the target.
   check `git diff --cached --stat` before each. When a later step changes code an earlier commit
   added, commit that change as its `--fixup` at once, apart from the step's own files. To realign
   committed changes, split each overfull commit where it stands and fold the pieces into their
-  targets with fixups.
+  targets with fixups. Squash onto the branch's own merge base (`git merge-base BASE HEAD`): a soft
+  reset onto a base that moved since keeps the old base's files in the index, and the commit reverts
+  what the base gained. After any rewrite, read `git diff --stat BASE TIP` for a file the branch
+  never meant to change.
 - **[lesson]** A rebase todo script fails when it matches nothing; the todo is written
   `pick <hash> # <subject>`.
 - **[lesson]** When a decision changes, grep the branch's docs, runbooks, comments, commit messages
