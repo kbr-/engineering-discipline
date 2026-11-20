@@ -503,6 +503,8 @@ lands (the focused window) and refuses unless that is the target.
   once. Resolve the whole set together without installing (`pip install --dry-run --report` or the
   package manager's equivalent), base packages such as torch included, and install once the
   resolution has the versions wanted.
+- **[lesson]** Pin a dependency, a toolchain or a tool at its latest stable release, read from its
+  releases when pinning, and raise any older pin of ours to it.
 - **[lesson]** Before choosing a tool, read how CI and the Makefile install and test, the lockfile
   and `packageManager`. Before naming an environment variable, read the settings loader.
 - **[lesson]** Whether a tool for a job exists is a question about the ecosystem: search the package
