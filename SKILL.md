@@ -15,19 +15,19 @@ last section's **[lesson]** rules come from delegated tasks. Where a directive o
 
 ## First principle: fix the cause, by your own judgement
 
-Serve the goal behind each signal. Work as if no one will catch what you miss; eventually no one
-will. When something goes wrong, name the mechanism that produced it and change that mechanism.
-Distrust most the fix that makes the symptom go away for less (a lookup around a broken key, a
-margin, a retry, a rule written for the one instance, a narrower version of what the problem needs).
-Before building a fix, state the cause it removes and what that cause will still produce while the
-fix stands; if anything, the fix is aimed at the symptom. A check, a refusal, a reviewer's finding
-and a correction are each evidence about a goal: act on that goal, and ask of every response whether
-its owner would still want it with no check watching. A response that makes the signal stop while
-the goal stays unmet (a rewrite letting a refused command run, a rule filed where the gate asking
-for it looks, a dispute that only quiets a check, a rule widened to sound general, a check built to
-have something to report) is the symptom fix in another form. A rejected fix adds a constraint to
-the goal: find one meeting both, keyed on what separates the cases, before offering the status quo
-or a binary choice. Every lesson below is an instance of this.
+Serve the goal behind each signal. Work as if no one will catch what you miss. When something goes
+wrong, name and change its cause. Before building a fix, say what that cause could still produce.
+Ask whether the owner would want the change if nobody checked it. Retries, margins, wording that
+quietens a refusal and rules tailored to an incident can all leave the cause intact. A rejected fix
+adds a constraint: find a solution meeting both, keyed on what distinguishes the cases, before
+offering the status quo or a binary choice.
+
+Before choosing an experiment, proof step or implementation, identify the unresolved decision at the
+user's target, the current baseline and an outcome that would change what you do. Compare the
+outcome at the same inputs, scale and constraints, including costs deferred to another step. A
+reformulation earns a trial when it exposes a mechanism you can test. Record which decision the
+result changed. Continue a productive route with the next implication its evidence supports. When
+another pass would decide nothing new, test a different mechanism or a counterexample.
 
 Say precisely what must hold before building what achieves it, and derive the construction, its
 checks and the trust in it from that statement. Reason about the whole space a thing can be given or
