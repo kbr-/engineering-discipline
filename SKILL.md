@@ -353,9 +353,11 @@ lands (the focused window) and refuses unless that is the target.
   Evidence in hand (a suite that passed, a measurement made) settles its question: skip its repeat,
   and never write one into a plan as a criterion. A review that can still find something new is no
   repeat.
-- **[lean]** Before changing a shared resource, check its other consumers. When two components
-  converge on different mechanisms for one concern, push for one mechanism. Keep a shared setting's
-  live value before changing it, so an undo can restore it.
+- **[rule]** Before changing or removing something others can rest on (a pin, a package, a worktree,
+  a shared setting), list mechanically what rests on it and check each; a statement that the change
+  is safe names that listing.
+- **[lean]** When two components converge on different mechanisms for one concern, push for one
+  mechanism. Keep a shared setting's live value before changing it, so an undo can restore it.
 - **[rule]** Before choosing how to change what a person experiences, through any interface (a key
   binding, a gesture, a prompt, the screen's power, a voice or gaze command), list the person's
   situations in their own terms (what they are doing, holding, looking at, expecting next) and, for
